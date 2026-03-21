@@ -121,11 +121,13 @@ const initialSchools = [
     isKansas: false,
     hasMaterialsEng: true,
     tuitionRoomBoard: 53752,
-    scholarships: [],
+    scholarships: [
+      { name: "Scholarship", amount: 10697 },
+    ],
     ratings: { affordability: 4, academic: 7, townVibe: 7 },
     notes: {
       affordability:
-        "~$53,752/yr tuition + room & board (out-of-state). No scholarships yet. Check Palmetto Fellows and Carolina Scholars scholarships.",
+        "~$53,752/yr tuition + room & board (out-of-state). $10,697/yr scholarship brings it down to ~$43,055/yr.",
       academic:
         "Materials Science & Engineering program available. Good engineering school with nuclear engineering specialty. Urban campus with more diverse academic offerings.",
       townVibe:
