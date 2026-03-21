@@ -152,7 +152,7 @@ function StarRating({ value, onChange, color, isMobile }) {
         return (
           <span
             key={star}
-            onClick={() => onChange(star)}
+            onClick={(e) => { e.stopPropagation(); onChange(star); }}
             onMouseEnter={() => setHover(star)}
             onMouseLeave={() => setHover(0)}
             style={{
