@@ -35,6 +35,7 @@ const initialSchools = [
         "R1 research university. Strong engineering school (KSPE ranked). Offers a concentration in Materials Engineering (not a full degree). Related programs in Chemical & Mechanical Engineering.",
       townVibe:
         "Classic college town — Mass St. has great restaurants, shops & live music. Big 12 sports culture. Vibrant and walkable downtown.",
+      townVibeSource: "Niche.com, KU campus reviews, Visit Lawrence",
       materialsEng: "concentration",
     },
   },
@@ -58,6 +59,7 @@ const initialSchools = [
         "#4 ranked Materials Engineering program in the US (US News 2024). One of the top engineering schools in the country. Highly rigorous.",
       townVibe:
         "Classic Midwest college town. West Lafayette is smaller and focused around campus. Strong engineering culture, lots of industry recruiting on campus.",
+      townVibeSource: "Niche.com, Purdue student reviews, Visit Greater Lafayette",
       materialsEng: true,
     },
   },
@@ -82,6 +84,7 @@ const initialSchools = [
         "Solid liberal arts & sciences university. Strong environmental science, forestry, and humanities. No dedicated Materials Engineering program.",
       townVibe:
         "One of the best college towns in the West. Missoula is outdoorsy, artsy, and vibrant — hiking, skiing, river activities. Strong community feel.",
+      townVibeSource: "Niche.com, Destination Missoula, U of Montana student reviews",
       materialsEng: false,
     },
   },
@@ -104,6 +107,7 @@ const initialSchools = [
         "Strong Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. ACC school with solid research reputation.",
       townVibe:
         "True college town — Clemson is essentially built around the university. Strong football culture (Death Valley). Smaller, tight-knit community in the SC foothills.",
+      townVibeSource: "Niche.com, Clemson student reviews, Visit Clemson SC",
       materialsEng: true,
     },
   },
@@ -126,6 +130,7 @@ const initialSchools = [
         "Materials Science & Engineering program available. Good engineering school with nuclear engineering specialty. Urban campus with more diverse academic offerings.",
       townVibe:
         "Columbia is a mid-size city — more urban feel than a typical college town. Five Points entertainment district, diverse food scene, warm weather year-round.",
+      townVibeSource: "Niche.com, USC student reviews, Experience Columbia SC",
       materialsEng: true,
     },
   },
@@ -181,33 +186,7 @@ function StarRating({ value, onChange, color, isMobile }) {
 }
 
 function NotePanel({ school, activeNote }) {
-  if (!activeNote)
-    return (
-      <div
-        style={{
-          background: "#f9fafb",
-          borderRadius: 12,
-          padding: 20,
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#9ca3af",
-          fontSize: 14,
-          textAlign: "center",
-          border: "2px dashed #e5e7eb",
-        }}
-      >
-        <div>
-          <div style={{ fontSize: 32, marginBottom: 8 }}>{"\u{1F4A1}"}</div>
-          <div>
-            Hover over a rating category
-            <br />
-            to see detailed notes
-          </div>
-        </div>
-      </div>
-    );
+  if (!activeNote) return null;
 
   const criterion = CRITERIA.find((c) => c.key === activeNote);
   const note = school.notes[activeNote];
@@ -215,30 +194,13 @@ function NotePanel({ school, activeNote }) {
   return (
     <div
       style={{
-        background: "white",
-        borderRadius: 12,
-        padding: 20,
-        height: "100%",
-        border: `2px solid ${criterion?.color || "#e5e7eb"}`,
-        boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+        background: `${criterion?.color}08`,
+        borderRadius: "0 0 10px 10px",
+        padding: "14px 16px",
+        border: `1px solid ${criterion?.color || "#e5e7eb"}40`,
+        borderTop: "none",
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 8,
-          marginBottom: 12,
-        }}
-      >
-        <span style={{ fontSize: 22 }}>{criterion?.icon}</span>
-        <div>
-          <div style={{ fontWeight: 700, fontSize: 15, color: "#111827" }}>
-            {criterion?.label}
-          </div>
-          <div style={{ fontSize: 12, color: "#6b7280" }}>{school.name}</div>
-        </div>
-      </div>
       <p
         style={{
           fontSize: 13.5,
@@ -249,6 +211,18 @@ function NotePanel({ school, activeNote }) {
       >
         {note}
       </p>
+      {activeNote === "townVibe" && school.notes.townVibeSource && (
+        <div
+          style={{
+            marginTop: 8,
+            fontSize: 11,
+            color: "#9ca3af",
+            fontStyle: "italic",
+          }}
+        >
+          Source: {school.notes.townVibeSource}
+        </div>
+      )}
       {activeNote === "academic" && (
         <div
           style={{
@@ -457,75 +431,75 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
       <div
         style={{
           padding: isMobile ? 14 : 20,
-          display: "grid",
-          gridTemplateColumns: isMobile ? "1fr" : "1fr 280px",
-          gap: isMobile ? 14 : 20,
         }}
       >
         {/* Ratings */}
         <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
           {CRITERIA.map((criterion) => (
-            <div
-              key={criterion.key}
-              onMouseEnter={() => !isMobile && setActiveNote(criterion.key)}
-              onMouseLeave={() => !isMobile && setActiveNote(null)}
-              onClick={() => isMobile && setActiveNote(activeNote === criterion.key ? null : criterion.key)}
-              style={{
-                padding: "10px 14px",
-                borderRadius: 10,
-                cursor: "default",
-                background:
-                  activeNote === criterion.key
-                    ? `${criterion.color}10`
-                    : "#f9fafb",
-                border: `1px solid ${activeNote === criterion.key ? criterion.color + "40" : "#f3f4f6"}`,
-                transition: "all 0.15s",
-              }}
-            >
+            <div key={criterion.key}>
               <div
+                onClick={() => setActiveNote(activeNote === criterion.key ? null : criterion.key)}
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  marginBottom: 6,
+                  padding: "10px 14px",
+                  borderRadius: activeNote === criterion.key ? "10px 10px 0 0" : 10,
+                  cursor: "pointer",
+                  background:
+                    activeNote === criterion.key
+                      ? `${criterion.color}10`
+                      : "#f9fafb",
+                  border: `1px solid ${activeNote === criterion.key ? criterion.color + "40" : "#f3f4f6"}`,
+                  borderBottom: activeNote === criterion.key ? "none" : undefined,
+                  transition: "all 0.15s",
                 }}
               >
                 <div
-                  style={{ display: "flex", alignItems: "center", gap: 6 }}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "space-between",
+                    marginBottom: 6,
+                  }}
                 >
-                  <span style={{ fontSize: 16 }}>{criterion.icon}</span>
-                  <span
-                    style={{
-                      fontWeight: 600,
-                      fontSize: 13,
-                      color: "#374151",
-                    }}
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 6 }}
                   >
-                    {criterion.label}
-                  </span>
+                    <span style={{ fontSize: 16 }}>{criterion.icon}</span>
+                    <span
+                      style={{
+                        fontWeight: 600,
+                        fontSize: 13,
+                        color: "#374151",
+                      }}
+                    >
+                      {criterion.label}
+                    </span>
+                    <span style={{ fontSize: 12, color: "#9ca3af", marginLeft: 4 }}>
+                      {activeNote === criterion.key ? "\u25B2" : "\u25BC"}
+                    </span>
+                  </div>
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 6 }}
+                  >
+                    <span style={{ fontSize: 11, color: "#9ca3af" }}>
+                      weight: {weights[criterion.key]}x
+                    </span>
+                  </div>
                 </div>
-                <div
-                  style={{ display: "flex", alignItems: "center", gap: 6 }}
-                >
-                  <span style={{ fontSize: 11, color: "#9ca3af" }}>
-                    weight: {weights[criterion.key]}x
-                  </span>
-                </div>
+                <StarRating
+                  value={school.ratings[criterion.key]}
+                  onChange={(val) =>
+                    onRatingChange(school.id, criterion.key, val)
+                  }
+                  color={criterion.color}
+                  isMobile={isMobile}
+                />
               </div>
-              <StarRating
-                value={school.ratings[criterion.key]}
-                onChange={(val) =>
-                  onRatingChange(school.id, criterion.key, val)
-                }
-                color={criterion.color}
-                isMobile={isMobile}
-              />
+              {activeNote === criterion.key && (
+                <NotePanel school={school} activeNote={activeNote} />
+              )}
             </div>
           ))}
         </div>
-
-        {/* Notes panel */}
-        <NotePanel school={school} activeNote={activeNote} />
       </div>
     </div>
   );
@@ -608,7 +582,7 @@ export default function CollegeRanker() {
               Charlotte's College Ranking Tool
             </h1>
             <p style={{ color: "#6b7280", fontSize: isMobile ? 13 : 15, margin: 0 }}>
-              Rate each school 1–10 across all criteria. {isMobile ? "Tap" : "Hover over"} a category to
+              Rate each school 1–10 across all criteria. Click a category to
               see detailed notes.
             </p>
           </div>
