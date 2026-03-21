@@ -19,9 +19,10 @@ const initialSchools = [
     shortName: "KU",
     location: "Lawrence, KS",
     logo: "/logos/ku.png",
+    schoolColor: "#0051BA",
     isKansas: true,
     hasMaterialsEng: "concentration",
-    tuitionRoomBoard: 22200,
+    tuitionRoomBoard: 25510,
     scholarships: [
       { name: "Chancellor's Scholarship", amount: 5000 },
       { name: "Engineering Scholarship", amount: 1500 },
@@ -29,7 +30,7 @@ const initialSchools = [
     ratings: { affordability: 9, academic: 7, townVibe: 8 },
     notes: {
       affordability:
-        "~$22,200/yr tuition + room & board. Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off.",
+        "~$25,510/yr tuition + room & board (in-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off.",
       academic:
         "R1 research university. Strong engineering school (KSPE ranked). Offers a concentration in Materials Engineering (not a full degree). Related programs in Chemical & Mechanical Engineering.",
       townVibe:
@@ -43,15 +44,16 @@ const initialSchools = [
     shortName: "Purdue",
     location: "West Lafayette, IN",
     logo: "/logos/purdue.png",
+    schoolColor: "#CFB991",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 39800,
+    tuitionRoomBoard: 41614,
     scholarships: [],
     scholarshipNote: "Deferred — no scholarship yet",
     ratings: { affordability: 5, academic: 10, townVibe: 6 },
     notes: {
       affordability:
-        "~$28,800/yr out-of-state tuition. Pricier but Purdue is known for keeping costs relatively low for a Big 10 school. Deferred admission — no scholarship yet. Strong co-op/internship opportunities offset costs.",
+        "~$41,614/yr tuition + room & board (out-of-state). Purdue has maintained a tuition freeze since 2012. Deferred admission — no scholarship yet. Strong co-op/internship opportunities offset costs.",
       academic:
         "#4 ranked Materials Engineering program in the US (US News 2024). One of the top engineering schools in the country. Highly rigorous.",
       townVibe:
@@ -65,16 +67,17 @@ const initialSchools = [
     shortName: "U of M",
     location: "Missoula, MT",
     logo: "/logos/montana.png",
+    schoolColor: "#660033",
     isKansas: false,
     hasMaterialsEng: false,
-    tuitionRoomBoard: 42664,
+    tuitionRoomBoard: 49404,
     scholarships: [
       { name: "Scholarship", amount: 15000 },
     ],
     ratings: { affordability: 6, academic: 5, townVibe: 9 },
     notes: {
       affordability:
-        "~$42,664/yr tuition + room & board. $15,000/yr scholarship brings it down to ~$27,664/yr.",
+        "~$49,404/yr tuition + room & board (out-of-state). $15,000/yr scholarship brings it down to ~$34,404/yr. Kansas students do not qualify for WUE.",
       academic:
         "Solid liberal arts & sciences university. Strong environmental science, forestry, and humanities. No dedicated Materials Engineering program.",
       townVibe:
@@ -88,14 +91,15 @@ const initialSchools = [
     shortName: "Clemson",
     location: "Clemson, SC",
     logo: "/logos/clemson.png",
+    schoolColor: "#F56600",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 49550,
+    tuitionRoomBoard: 56602,
     scholarships: [],
     ratings: { affordability: 3, academic: 8, townVibe: 7 },
     notes: {
       affordability:
-        "~$38,550/yr out-of-state tuition. One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
+        "~$56,602/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
       academic:
         "Strong Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. ACC school with solid research reputation.",
       townVibe:
@@ -109,14 +113,15 @@ const initialSchools = [
     shortName: "USC",
     location: "Columbia, SC",
     logo: "/logos/usc.png",
+    schoolColor: "#73000A",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 46000,
+    tuitionRoomBoard: 53752,
     scholarships: [],
     ratings: { affordability: 4, academic: 7, townVibe: 7 },
     notes: {
       affordability:
-        "~$34,000/yr out-of-state tuition. No scholarships yet. Check Palmetto Fellows and Carolina Scholars scholarships.",
+        "~$53,752/yr tuition + room & board (out-of-state). No scholarships yet. Check Palmetto Fellows and Carolina Scholars scholarships.",
       academic:
         "Materials Science & Engineering program available. Good engineering school with nuclear engineering specialty. Urban campus with more diverse academic offerings.",
       townVibe:
@@ -302,8 +307,8 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
       {/* Header */}
       <div
         style={{
-          background: `linear-gradient(135deg, ${rankColors[rank - 1]}22, ${rankColors[rank - 1]}11)`,
-          borderBottom: `3px solid ${rankColors[rank - 1]}`,
+          background: `linear-gradient(135deg, ${school.schoolColor}18, ${school.schoolColor}08)`,
+          borderBottom: `3px solid ${school.schoolColor}40`,
           padding: isMobile ? "12px 14px" : "16px 20px",
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
