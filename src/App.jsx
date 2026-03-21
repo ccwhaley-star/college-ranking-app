@@ -1,4 +1,16 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+
+function useIsMobile(breakpoint = 700) {
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < breakpoint : false
+  );
+  useEffect(() => {
+    const handler = () => setIsMobile(window.innerWidth < breakpoint);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, [breakpoint]);
+  return isMobile;
+}
 
 const initialSchools = [
   {
@@ -11,13 +23,13 @@ const initialSchools = [
     hasMaterialsEng: "concentration",
     tuitionRoomBoard: 22200,
     scholarships: [
-      { name: "Chancellor's Scholarship", amount: 11200 },
+      { name: "Chancellor's Scholarship", amount: 5000 },
       { name: "Engineering Scholarship", amount: 1500 },
     ],
     ratings: { affordability: 9, academic: 7, townVibe: 8 },
     notes: {
       affordability:
-        "~$11,200/yr in-state tuition. As a Kansas resident this is your best value option. Chancellor's Scholarship covers full tuition + $1,500/yr engineering scholarship.",
+        "~$22,200/yr tuition + room & board. Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off.",
       academic:
         "R1 research university. Strong engineering school (KSPE ranked). Offers a concentration in Materials Engineering (not a full degree). Related programs in Chemical & Mechanical Engineering.",
       townVibe:
@@ -56,12 +68,13 @@ const initialSchools = [
     isKansas: false,
     hasMaterialsEng: false,
     tuitionRoomBoard: 42664,
-    scholarships: [],
-    scholarshipNote: "Scholarship amount TBD",
+    scholarships: [
+      { name: "Scholarship", amount: 15000 },
+    ],
     ratings: { affordability: 6, academic: 5, townVibe: 9 },
     notes: {
       affordability:
-        "~$8,456/yr in-state, ~$33,664/yr out-of-state. Check Western Undergraduate Exchange (WUE) program — Kansas students may qualify for reduced tuition (~$12,684/yr). Scholarship amount TBD.",
+        "~$42,664/yr tuition + room & board. $15,000/yr scholarship brings it down to ~$27,664/yr.",
       academic:
         "Solid liberal arts & sciences university. Strong environmental science, forestry, and humanities. No dedicated Materials Engineering program.",
       townVibe:
@@ -119,10 +132,10 @@ const CRITERIA = [
   { key: "townVibe", label: "Town Vibe", icon: "\u{1F3D9}\uFE0F", color: "#f59e0b" },
 ];
 
-function StarRating({ value, onChange, color }) {
+function StarRating({ value, onChange, color, isMobile }) {
   const [hover, setHover] = useState(0);
   return (
-    <div style={{ display: "flex", gap: 2 }}>
+    <div style={{ display: "flex", gap: isMobile ? 1 : 2, flexWrap: "wrap" }}>
       {[...Array(10)].map((_, i) => {
         const star = i + 1;
         const filled = star <= (hover || value);
@@ -134,10 +147,12 @@ function StarRating({ value, onChange, color }) {
             onMouseLeave={() => setHover(0)}
             style={{
               cursor: "pointer",
-              fontSize: 18,
+              fontSize: isMobile ? 20 : 18,
               color: filled ? color : "#d1d5db",
               transition: "color 0.1s",
               userSelect: "none",
+              padding: isMobile ? "2px 1px" : 0,
+              WebkitTapHighlightColor: "transparent",
             }}
           >
             {"\u2605"}
@@ -253,7 +268,7 @@ function NotePanel({ school, activeNote }) {
   );
 }
 
-function SchoolCard({ school, rank, onRatingChange, weights }) {
+function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
   const [activeNote, setActiveNote] = useState(null);
 
   const totalScore = useMemo(() => {
@@ -289,20 +304,22 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
         style={{
           background: `linear-gradient(135deg, ${rankColors[rank - 1]}22, ${rankColors[rank - 1]}11)`,
           borderBottom: `3px solid ${rankColors[rank - 1]}`,
-          padding: "16px 20px",
+          padding: isMobile ? "12px 14px" : "16px 20px",
           display: "flex",
-          alignItems: "center",
+          flexDirection: isMobile ? "column" : "row",
+          alignItems: isMobile ? "stretch" : "center",
           justifyContent: "space-between",
+          gap: isMobile ? 12 : 0,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <div style={{ position: "relative" }}>
+          <div style={{ position: "relative", flexShrink: 0 }}>
             <img
               src={school.logo}
               alt={school.shortName}
               style={{
-                width: 44,
-                height: 44,
+                width: isMobile ? 36 : 44,
+                height: isMobile ? 36 : 44,
                 objectFit: "contain",
                 borderRadius: 8,
                 background: "white",
@@ -330,16 +347,17 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
               {rank}
             </div>
           </div>
-          <div>
-            <div style={{ fontWeight: 800, fontSize: 17, color: "#111827" }}>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontWeight: 800, fontSize: isMobile ? 15 : 17, color: "#111827" }}>
               {school.name}
             </div>
             <div
               style={{
-                fontSize: 12,
+                fontSize: 11,
                 color: "#6b7280",
                 display: "flex",
-                gap: 8,
+                flexWrap: "wrap",
+                gap: isMobile ? 4 : 8,
                 marginTop: 2,
               }}
             >
@@ -389,17 +407,17 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: isMobile ? 12 : 20, justifyContent: isMobile ? "space-between" : "flex-end" }}>
           {/* Cost info */}
-          <div style={{ textAlign: "right" }}>
-            <div style={{ fontSize: 12, color: "#9ca3af", marginBottom: 2 }}>
+          <div style={{ textAlign: isMobile ? "left" : "right" }}>
+            <div style={{ fontSize: 11, color: "#9ca3af", marginBottom: 2 }}>
               Tuition + Room & Board
             </div>
-            <div style={{ fontSize: 15, color: "#6b7280", textDecoration: totalScholarship > 0 ? "line-through" : "none" }}>
+            <div style={{ fontSize: isMobile ? 13 : 15, color: "#6b7280", textDecoration: totalScholarship > 0 ? "line-through" : "none" }}>
               ${school.tuitionRoomBoard.toLocaleString()}/yr
             </div>
             {totalScholarship > 0 ? (
-              <div style={{ fontSize: 17, fontWeight: 800, color: "#10b981" }}>
+              <div style={{ fontSize: isMobile ? 15 : 17, fontWeight: 800, color: "#10b981" }}>
                 ${(school.tuitionRoomBoard - totalScholarship).toLocaleString()}/yr
               </div>
             ) : school.scholarshipNote ? (
@@ -418,7 +436,7 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
           <div style={{ textAlign: "right" }}>
             <div
               style={{
-                fontSize: 28,
+                fontSize: isMobile ? 24 : 28,
                 fontWeight: 900,
                 color: rankColors[rank - 1],
               }}
@@ -433,10 +451,10 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
       {/* Body */}
       <div
         style={{
-          padding: 20,
+          padding: isMobile ? 14 : 20,
           display: "grid",
-          gridTemplateColumns: "1fr 280px",
-          gap: 20,
+          gridTemplateColumns: isMobile ? "1fr" : "1fr 280px",
+          gap: isMobile ? 14 : 20,
         }}
       >
         {/* Ratings */}
@@ -444,8 +462,9 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
           {CRITERIA.map((criterion) => (
             <div
               key={criterion.key}
-              onMouseEnter={() => setActiveNote(criterion.key)}
-              onMouseLeave={() => setActiveNote(null)}
+              onMouseEnter={() => !isMobile && setActiveNote(criterion.key)}
+              onMouseLeave={() => !isMobile && setActiveNote(null)}
+              onClick={() => isMobile && setActiveNote(activeNote === criterion.key ? null : criterion.key)}
               style={{
                 padding: "10px 14px",
                 borderRadius: 10,
@@ -494,6 +513,7 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
                   onRatingChange(school.id, criterion.key, val)
                 }
                 color={criterion.color}
+                isMobile={isMobile}
               />
             </div>
           ))}
@@ -507,6 +527,7 @@ function SchoolCard({ school, rank, onRatingChange, weights }) {
 }
 
 export default function CollegeRanker() {
+  const isMobile = useIsMobile();
   const [schools, setSchools] = useState(initialSchools);
   const [weights, setWeights] = useState({
     affordability: 1,
@@ -555,24 +576,25 @@ export default function CollegeRanker() {
     >
       <div style={{ maxWidth: 1000, margin: "0 auto" }}>
         {/* Header */}
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 16, marginBottom: 32 }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: isMobile ? 12 : 16, marginBottom: isMobile ? 20 : 32 }}>
           <img
             src="/charlotte.jpg"
             alt="Charlotte"
             style={{
-              width: 64,
-              height: 64,
+              width: isMobile ? 48 : 64,
+              height: isMobile ? 48 : 64,
               borderRadius: "50%",
               objectFit: "cover",
               objectPosition: "center 15%",
               border: "3px solid #f59e0b",
               boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
+              flexShrink: 0,
             }}
           />
           <div>
             <h1
               style={{
-                fontSize: 28,
+                fontSize: isMobile ? 20 : 28,
                 fontWeight: 900,
                 color: "#111827",
                 margin: "0 0 4px",
@@ -580,8 +602,8 @@ export default function CollegeRanker() {
             >
               Charlotte's College Ranking Tool
             </h1>
-            <p style={{ color: "#6b7280", fontSize: 15, margin: 0 }}>
-              Rate each school 1–10 across all criteria. Hover over a category to
+            <p style={{ color: "#6b7280", fontSize: isMobile ? 13 : 15, margin: 0 }}>
+              Rate each school 1–10 across all criteria. {isMobile ? "Tap" : "Hover over"} a category to
               see detailed notes.
             </p>
           </div>
@@ -601,8 +623,8 @@ export default function CollegeRanker() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 20,
+              gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+              gap: isMobile ? 16 : 20,
             }}
           >
             {/* Weights */}
@@ -798,6 +820,7 @@ export default function CollegeRanker() {
                 rank={idx + 1}
                 onRatingChange={handleRatingChange}
                 weights={weights}
+                isMobile={isMobile}
               />
             ))}
           </div>
