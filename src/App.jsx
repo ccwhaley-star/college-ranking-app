@@ -142,24 +142,18 @@ const CRITERIA = [
   { key: "townVibe", label: "Town Vibe", icon: "\u{1F3D9}\uFE0F", color: "#f59e0b" },
 ];
 
-function StarRating({ value, onChange, color, isMobile }) {
-  const [hover, setHover] = useState(0);
+function StarRating({ value, color, isMobile }) {
   return (
     <div style={{ display: "flex", gap: isMobile ? 1 : 2, flexWrap: "wrap" }}>
       {[...Array(10)].map((_, i) => {
         const star = i + 1;
-        const filled = star <= (hover || value);
+        const filled = star <= value;
         return (
           <span
             key={star}
-            onClick={(e) => { e.stopPropagation(); onChange(star); }}
-            onMouseEnter={() => setHover(star)}
-            onMouseLeave={() => setHover(0)}
             style={{
-              cursor: "pointer",
               fontSize: isMobile ? 20 : 18,
               color: filled ? color : "#d1d5db",
-              transition: "color 0.1s",
               userSelect: "none",
               padding: isMobile ? "2px 1px" : 0,
               WebkitTapHighlightColor: "transparent",
@@ -487,9 +481,6 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
                 </div>
                 <StarRating
                   value={school.ratings[criterion.key]}
-                  onChange={(val) =>
-                    onRatingChange(school.id, criterion.key, val)
-                  }
                   color={criterion.color}
                   isMobile={isMobile}
                 />
