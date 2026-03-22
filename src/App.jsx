@@ -22,15 +22,15 @@ const initialSchools = [
     schoolColor: "#0051BA",
     isKansas: true,
     hasMaterialsEng: "concentration",
-    tuitionRoomBoard: 25510,
+    tuitionRoomBoard: 44389,
     scholarships: [
       { name: "Chancellor's Scholarship", amount: 5000 },
       { name: "Engineering Scholarship", amount: 1500 },
     ],
-    ratings: { affordability: 9, academic: 7, townVibe: 8 },
+    ratings: { affordability: 7, academic: 7, townVibe: 8 },
     notes: {
       affordability:
-        "~$25,510/yr tuition + room & board (in-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off.",
+        "~$44,389/yr tuition + room & board (out-of-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off. After scholarships: ~$37,889/yr.",
       academic:
         "R1 research university. Strong engineering school (KSPE ranked). Offers a concentration in Materials Engineering (not a full degree). Related programs in Chemical & Mechanical Engineering.",
       townVibe:
@@ -48,13 +48,13 @@ const initialSchools = [
     schoolColor: "#CFB991",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 41614,
+    tuitionRoomBoard: 42514,
     scholarships: [],
     scholarshipNote: "Deferred — no scholarship yet",
     ratings: { affordability: 5, academic: 10, townVibe: 6 },
     notes: {
       affordability:
-        "~$41,614/yr tuition + room & board (out-of-state). Purdue has maintained a tuition freeze since 2012. Deferred admission — no scholarship yet. Strong co-op/internship opportunities offset costs.",
+        "~$42,514/yr tuition + room & board (out-of-state). Purdue has maintained a tuition freeze since 2012. Deferred admission — no scholarship yet. Strong co-op/internship opportunities offset costs.",
       academic:
         "#4 ranked Materials Engineering program in the US (US News 2024). One of the top engineering schools in the country. Highly rigorous.",
       townVibe:
@@ -97,12 +97,12 @@ const initialSchools = [
     schoolColor: "#F56600",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 56602,
+    tuitionRoomBoard: 54786,
     scholarships: [],
     ratings: { affordability: 3, academic: 8, townVibe: 7 },
     notes: {
       affordability:
-        "~$56,602/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
+        "~$54,786/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
       academic:
         "Strong Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. ACC school with solid research reputation.",
       townVibe:
@@ -120,14 +120,14 @@ const initialSchools = [
     schoolColor: "#73000A",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 53752,
+    tuitionRoomBoard: 64052,
     scholarships: [
       { name: "Scholarship", amount: 10697 },
     ],
-    ratings: { affordability: 4, academic: 7, townVibe: 7 },
+    ratings: { affordability: 3, academic: 7, townVibe: 7 },
     notes: {
       affordability:
-        "~$53,752/yr tuition + room & board (out-of-state). $10,697/yr scholarship brings it down to ~$43,055/yr.",
+        "~$64,052/yr tuition + room & board (out-of-state). $10,697/yr scholarship brings it down to ~$53,355/yr.",
       academic:
         "Materials Science & Engineering program available. Good engineering school with nuclear engineering specialty. Urban campus with more diverse academic offerings.",
       townVibe:
