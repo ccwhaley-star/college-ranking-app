@@ -97,12 +97,12 @@ const initialSchools = [
     schoolColor: "#F56600",
     isKansas: false,
     hasMaterialsEng: true,
-    tuitionRoomBoard: 54786,
+    tuitionRoomBoard: 56602,
     scholarships: [],
     ratings: { affordability: 3, academic: 8, townVibe: 7 },
     notes: {
       affordability:
-        "~$54,786/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
+        "~$56,602/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
       academic:
         "Strong Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. ACC school with solid research reputation.",
       townVibe:
