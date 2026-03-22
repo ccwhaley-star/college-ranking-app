@@ -523,7 +523,7 @@ export default function CollegeRanker() {
   const rankedSchools = useMemo(() => {
     let filtered = [...schools];
     if (filterKansas) filtered = filtered.filter((s) => !s.isKansas);
-    if (filterMaterials) filtered = filtered.filter((s) => s.hasMaterialsEng);
+    if (filterMaterials) filtered = filtered.filter((s) => s.hasMaterialsEng === true);
     return filtered.sort((a, b) => getScore(b) - getScore(a));
   }, [schools, weights, filterKansas, filterMaterials]);
 
