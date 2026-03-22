@@ -22,15 +22,15 @@ const initialSchools = [
     schoolColor: "#0051BA",
     isKansas: true,
     hasMaterialsEng: "concentration",
-    tuitionRoomBoard: 44389,
+    tuitionRoomBoard: 25510,
     scholarships: [
       { name: "Chancellor's Scholarship", amount: 5000 },
       { name: "Engineering Scholarship", amount: 1500 },
     ],
-    ratings: { affordability: 7, academic: 7, townVibe: 8 },
+    ratings: { affordability: 9, academic: 7, townVibe: 8 },
     notes: {
       affordability:
-        "~$44,389/yr tuition + room & board (out-of-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off. After scholarships: ~$37,889/yr.",
+        "~$25,510/yr tuition + room & board (in-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off. After scholarships: ~$19,010/yr.",
       academic:
         "R1 research university. Strong engineering school (KSPE ranked). Offers a concentration in Materials Engineering (not a full degree). Related programs in Chemical & Mechanical Engineering.",
       townVibe:
