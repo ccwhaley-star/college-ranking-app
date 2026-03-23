@@ -177,8 +177,8 @@ const CRITERIA = [
   { key: "affordability", label: "Affordability", icon: "\u{1F4B0}", color: "#10b981" },
   { key: "academic", label: "Academics", icon: "\u{1F4DA}", color: "#6366f1" },
   { key: "townVibe", label: "Town Vibe", icon: "\u{1F3D9}\uFE0F", color: "#f59e0b" },
-  { key: "medianIncome", label: "Median Income", icon: "\u{1F4C8}", color: "#0ea5e9" },
-  { key: "roi", label: "Return on Investment", icon: "\u{1F4B5}", color: "#8b5cf6" },
+  { key: "medianIncome", label: "Income", icon: "\u{1F4B5}", color: "#0ea5e9" },
+  { key: "roi", label: "Investment Return", icon: "\u{1F4C8}", color: "#8b5cf6" },
 ];
 
 function StarRating({ value, color, isMobile }) {
