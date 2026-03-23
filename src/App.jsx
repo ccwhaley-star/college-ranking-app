@@ -711,7 +711,7 @@ export default function CollegeRanker() {
                     }}
                   >
                     <span
-                      style={{ fontSize: 14, width: 110, color: "#374151" }}
+                      style={{ fontSize: isMobile ? 12 : 14, width: isMobile ? 120 : 150, flexShrink: 0, color: "#374151", whiteSpace: "nowrap" }}
                     >
                       {c.icon} {c.label}
                     </span>
