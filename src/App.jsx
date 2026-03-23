@@ -27,7 +27,8 @@ const initialSchools = [
       { name: "Chancellor's Scholarship", amount: 5000 },
       { name: "Engineering Scholarship", amount: 1500 },
     ],
-    ratings: { affordability: 9, academic: 7, townVibe: 8 },
+    medianIncome: 63500,
+    ratings: { affordability: 9, academic: 7, townVibe: 8, medianIncome: 6, roi: 7 },
     notes: {
       affordability:
         "~$25,510/yr tuition + room & board (in-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off. After scholarships: ~$19,010/yr.",
@@ -36,6 +37,12 @@ const initialSchools = [
       townVibe:
         "Classic college town — Mass St. has great restaurants, shops & live music. Big 12 sports culture. Vibrant and walkable downtown.",
       townVibeSource: "Niche.com, KU campus reviews, Visit Lawrence",
+      medianIncome:
+        "KU engineering grads average ~$63,500/yr starting salary (Mechanical Engineering proxy — no standalone Materials Eng degree). Mid-career KU alumni average ~$77,489 across all majors.",
+      medianIncomeSource: "CollegeSimply, PayScale, KU Engineering Career Center",
+      roi:
+        "4-year cost after scholarships: ~$76,040. With an estimated starting salary of $63,500/yr, payback period is relatively short. Strong in-state value, though concentration (not full degree) in Materials Eng may limit specialized earning potential.",
+      roiSource: "Calculated from KU tuition data and PayScale salary estimates",
       materialsEng: "concentration",
     },
   },
@@ -51,7 +58,8 @@ const initialSchools = [
     tuitionRoomBoard: 42514,
     scholarships: [],
     scholarshipNote: "Deferred — no scholarship yet",
-    ratings: { affordability: 5, academic: 10, townVibe: 6 },
+    medianIncome: 78265,
+    ratings: { affordability: 5, academic: 10, townVibe: 6, medianIncome: 9, roi: 7 },
     notes: {
       affordability:
         "~$42,514/yr tuition + room & board (out-of-state). Purdue has maintained a tuition freeze since 2012. Deferred admission — no scholarship yet. Strong co-op/internship opportunities offset costs.",
@@ -60,6 +68,12 @@ const initialSchools = [
       townVibe:
         "Classic Midwest college town. West Lafayette is smaller and focused around campus. Strong engineering culture, lots of industry recruiting on campus.",
       townVibeSource: "Niche.com, Purdue student reviews, Visit Greater Lafayette",
+      medianIncome:
+        "Purdue Materials Engineering grads earn ~$74,000–$78,265/yr starting salary — above the national average of $74,110 for all Materials Eng BS recipients. #4 ranked program drives strong employer demand.",
+      medianIncomeSource: "College Factual, Purdue Center for Career Opportunities, PayScale",
+      roi:
+        "4-year cost without scholarships: ~$170,056. High upfront cost, but top-4 ranked Materials Eng program commands premium starting salaries ($78k+). Strong co-op program can offset costs. Deferred status means scholarship potential remains.",
+      roiSource: "Calculated from Purdue tuition data and College Factual salary data",
       materialsEng: true,
     },
   },
@@ -76,7 +90,8 @@ const initialSchools = [
     scholarships: [
       { name: "Scholarship", amount: 15000 },
     ],
-    ratings: { affordability: 6, academic: 5, townVibe: 9 },
+    medianIncome: 52100,
+    ratings: { affordability: 6, academic: 5, townVibe: 9, medianIncome: 4, roi: 4 },
     notes: {
       affordability:
         "~$49,404/yr tuition + room & board (out-of-state). $15,000/yr scholarship brings it down to ~$34,404/yr. Kansas students do not qualify for WUE.",
@@ -85,6 +100,12 @@ const initialSchools = [
       townVibe:
         "One of the best college towns in the West. Missoula is outdoorsy, artsy, and vibrant — hiking, skiing, river activities. Strong community feel.",
       townVibeSource: "Niche.com, Destination Missoula, U of Montana student reviews",
+      medianIncome:
+        "U of Montana alumni earn a median of ~$52,100/yr six years post-graduation (all majors). No Materials Eng program exists — closest proxy is Montana State (Bozeman) engineering grads at ~$70,160/yr starting.",
+      medianIncomeSource: "DOE College Scorecard, Montana State Career Destinations Report, PayScale",
+      roi:
+        "4-year cost after scholarship: ~$137,616. Without a Materials Eng program, earning potential trails schools with dedicated programs. Beautiful location but weaker financial return for an engineering-focused career path.",
+      roiSource: "Calculated from U of Montana tuition data and DOE College Scorecard",
       materialsEng: false,
     },
   },
@@ -99,7 +120,8 @@ const initialSchools = [
     hasMaterialsEng: true,
     tuitionRoomBoard: 56602,
     scholarships: [],
-    ratings: { affordability: 3, academic: 8, townVibe: 7 },
+    medianIncome: 75000,
+    ratings: { affordability: 3, academic: 8, townVibe: 7, medianIncome: 8, roi: 5 },
     notes: {
       affordability:
         "~$56,602/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
@@ -108,6 +130,12 @@ const initialSchools = [
       townVibe:
         "True college town — Clemson is essentially built around the university. Strong football culture (Death Valley). Smaller, tight-knit community in the SC foothills.",
       townVibeSource: "Niche.com, Clemson student reviews, Visit Clemson SC",
+      medianIncome:
+        "Clemson MSE grads average ~$75,000/yr starting salary (range $60k–$100k per department data). Clemson engineering grads overall: Chemical $75,951, ME $73,220. Early-career all-majors median is $62,100.",
+      medianIncomeSource: "Clemson MSE Department, PayScale, CollegeSimply",
+      roi:
+        "4-year cost without scholarships: ~$226,408. Strong MSE program with good starting salaries ($75k), but highest sticker price in the group. Merit scholarship potential could significantly improve ROI.",
+      roiSource: "Calculated from Clemson tuition data and Clemson MSE department salary reports",
       materialsEng: true,
     },
   },
@@ -124,7 +152,8 @@ const initialSchools = [
     scholarships: [
       { name: "Scholarship", amount: 10697 },
     ],
-    ratings: { affordability: 3, academic: 7, townVibe: 7 },
+    medianIncome: 71973,
+    ratings: { affordability: 3, academic: 7, townVibe: 7, medianIncome: 7, roi: 5 },
     notes: {
       affordability:
         "~$64,052/yr tuition + room & board (out-of-state). $10,697/yr scholarship brings it down to ~$53,355/yr.",
@@ -133,6 +162,12 @@ const initialSchools = [
       townVibe:
         "Columbia is a mid-size city — more urban feel than a typical college town. Five Points entertainment district, diverse food scene, warm weather year-round.",
       townVibeSource: "Niche.com, USC student reviews, Experience Columbia SC",
+      medianIncome:
+        "USC engineering grads earn ~$71,973/yr early career (College Factual). Mechanical Engineering starts at ~$72,370. All-major alumni median is $52,100 six years post-graduation. Mid-career all-majors median: ~$92,000–$98,000.",
+      medianIncomeSource: "College Factual, USC Career Center, PayScale, DOE College Scorecard",
+      roi:
+        "4-year cost after scholarship: ~$213,420. Scholarship helps but still one of the higher total costs. Engineering salary outcomes are solid ($72k) but the high sticker price extends the payback period compared to KU or Purdue.",
+      roiSource: "Calculated from USC tuition data and College Factual engineering salary data",
       materialsEng: true,
     },
   },
@@ -142,6 +177,8 @@ const CRITERIA = [
   { key: "affordability", label: "Affordability", icon: "\u{1F4B0}", color: "#10b981" },
   { key: "academic", label: "Academics", icon: "\u{1F4DA}", color: "#6366f1" },
   { key: "townVibe", label: "Town Vibe", icon: "\u{1F3D9}\uFE0F", color: "#f59e0b" },
+  { key: "medianIncome", label: "Median Income", icon: "\u{1F4C8}", color: "#0ea5e9" },
+  { key: "roi", label: "Return on Investment", icon: "\u{1F4B5}", color: "#8b5cf6" },
 ];
 
 function StarRating({ value, color, isMobile }) {
@@ -207,7 +244,7 @@ function NotePanel({ school, activeNote }) {
       >
         {note}
       </p>
-      {activeNote === "townVibe" && school.notes.townVibeSource && (
+      {school.notes[activeNote + "Source"] && (
         <div
           style={{
             marginTop: 8,
@@ -216,7 +253,51 @@ function NotePanel({ school, activeNote }) {
             fontStyle: "italic",
           }}
         >
-          Source: {school.notes.townVibeSource}
+          Source: {school.notes[activeNote + "Source"]}
+        </div>
+      )}
+      {activeNote === "medianIncome" && school.medianIncome && (
+        <div
+          style={{
+            marginTop: 12,
+            padding: "8px 12px",
+            borderRadius: 8,
+            background: "#eff6ff",
+            border: "1px solid #93c5fd",
+            fontSize: 13,
+            color: "#1e40af",
+            fontWeight: 600,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <span style={{ fontSize: 16 }}>{"\u{1F4B0}"}</span>
+          Median early-career salary: ${school.medianIncome.toLocaleString()}/yr
+        </div>
+      )}
+      {activeNote === "roi" && (
+        <div
+          style={{
+            marginTop: 12,
+            padding: "8px 12px",
+            borderRadius: 8,
+            background: "#f5f3ff",
+            border: "1px solid #c4b5fd",
+            fontSize: 13,
+            color: "#5b21b6",
+            fontWeight: 600,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <span style={{ fontSize: 16 }}>{"\u{1F4B5}"}</span>
+          {(() => {
+            const totalScholarship = (school.scholarships || []).reduce((sum, s) => sum + s.amount, 0);
+            const fourYearCost = (school.tuitionRoomBoard - totalScholarship) * 4;
+            return `4-year net cost: $${fourYearCost.toLocaleString()} · Estimated starting salary: $${(school.medianIncome || 0).toLocaleString()}/yr`;
+          })()}
         </div>
       )}
       {activeNote === "academic" && (
@@ -505,6 +586,8 @@ export default function CollegeRanker() {
     affordability: 1,
     academic: 1,
     townVibe: 1,
+    medianIncome: 1,
+    roi: 1,
   });
   const [filterKansas, setFilterKansas] = useState(false);
   const [filterMaterials, setFilterMaterials] = useState(false);
