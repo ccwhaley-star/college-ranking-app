@@ -171,6 +171,38 @@ const initialSchools = [
       materialsEng: true,
     },
   },
+  {
+    id: 6,
+    name: "Johnson County CC",
+    shortName: "JCCC",
+    location: "Overland Park, KS",
+    logo: "/logos/jccc.png",
+    schoolColor: "#003768",
+    isKansas: true,
+    hasMaterialsEng: false,
+    tuitionRoomBoard: 3030,
+    tuitionLabel: "Tuition + Fees (commuter)",
+    scholarships: [],
+    scholarshipNote: "Living at home — no room & board",
+    medianIncome: 36600,
+    ratings: { affordability: 10, academic: 4, townVibe: 5, medianIncome: 2, roi: 6 },
+    notes: {
+      affordability:
+        "~$3,030/yr in-district tuition + fees (30 credit hours at $101/hr). No room & board — commuter college, Charlotte would live at home. By far the most affordable option. Books ~$1,560/yr additional.",
+      academic:
+        "One of the largest community colleges in the KC metro. Ranked #4 out of 44 Kansas colleges. Offers engineering transfer pathway (not a degree) — foundational courses before transferring to KU, K-State, or WSU for specialization. Smaller class sizes. No Materials Engineering program.",
+      townVibe:
+        "Overland Park is a large suburb (200k+ population) — safe, family-friendly, excellent amenities. Ranked #6 on Livability.com's 2025 Best Places to Live. Car-dependent. Great restaurants and parks, but limited nightlife (KC proper for that). Not a traditional college town experience.",
+      townVibeSource: "Livability.com 2025 rankings, Niche.com, Experience Overland Park",
+      medianIncome:
+        "JCCC graduates earn median ~$29,900/yr two years post-graduation and ~$36,600/yr six years out. Those who transfer and complete a bachelor's earn ~$45,387/yr early career. No Materials Eng program — income reflects associate's-level earnings across all majors.",
+      medianIncomeSource: "JCCC Institutional Research Post-Graduate Report, DOE College Scorecard",
+      roi:
+        "2-year cost: ~$6,060 (tuition only, living at home). Extremely low investment. However, it's a transfer pathway — would need 2+ more years at a 4-year university to complete a bachelor's in engineering. Total 4-year cost depends on transfer destination. Best value as a stepping stone.",
+      roiSource: "JCCC tuition data, DOE College Scorecard salary data",
+      materialsEng: false,
+    },
+  },
 ];
 
 const CRITERIA = [
@@ -340,8 +372,8 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
 
   const totalScholarship = (school.scholarships || []).reduce((sum, s) => sum + s.amount, 0);
 
-  const rankColors = ["#f59e0b", "#9ca3af", "#cd7c2f", "#6366f1", "#6366f1"];
-  const rankLabels = ["\u{1F947}", "\u{1F948}", "\u{1F949}", "4th", "5th"];
+  const rankColors = ["#f59e0b", "#9ca3af", "#cd7c2f", "#6366f1", "#6366f1", "#6366f1"];
+  const rankLabels = ["\u{1F947}", "\u{1F948}", "\u{1F949}", "4th", "5th", "6th"];
 
   return (
     <div
@@ -467,7 +499,7 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
           {/* Cost info */}
           <div style={{ textAlign: isMobile ? "left" : "right" }}>
             <div style={{ fontSize: 11, color: "#9ca3af", marginBottom: 2 }}>
-              Tuition + Room & Board
+              {school.tuitionLabel || "Tuition + Room & Board"}
             </div>
             <div style={{ fontSize: isMobile ? 13 : 15, color: "#6b7280", textDecoration: totalScholarship > 0 ? "line-through" : "none" }}>
               ${school.tuitionRoomBoard.toLocaleString()}/yr
