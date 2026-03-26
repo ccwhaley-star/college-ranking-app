@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- JCCC leaf logo - four overlapping leaves -->
+  <!-- Bottom-left teal leaf -->
+  <path d="M95 170 C60 140, 30 110, 40 70 C55 85, 75 110, 95 170Z" fill="#0097A9"/>
+  <!-- Top-left dark teal leaf -->
+  <path d="M85 130 C50 95, 35 55, 55 20 C65 45, 75 80, 85 130Z" fill="#00677F"/>
+  <!-- Top-right lime leaf -->
+  <path d="M105 125 C110 80, 125 40, 160 25 C150 55, 130 85, 105 125Z" fill="#B5BD00"/>
+  <!-- Center green leaf -->
+  <path d="M100 145 C90 100, 95 55, 120 20 C120 55, 110 100, 100 145Z" fill="#78BE20"/>
+</svg>
