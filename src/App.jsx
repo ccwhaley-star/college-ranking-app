@@ -176,7 +176,7 @@ const initialSchools = [
     name: "Johnson County Community College",
     shortName: "JCCC",
     location: "Overland Park, KS",
-    logo: "/logos/jccc.svg",
+    logo: "/logos/jccc.png",
     schoolColor: "#003768",
     isKansas: true,
     hasMaterialsEng: false,
