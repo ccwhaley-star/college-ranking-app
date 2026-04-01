@@ -47,37 +47,6 @@ const initialSchools = [
     },
   },
   {
-    id: 2,
-    name: "Purdue University",
-    shortName: "Purdue",
-    location: "West Lafayette, IN",
-    logo: "/logos/purdue.png",
-    schoolColor: "#CFB991",
-    isKansas: false,
-    hasMaterialsEng: true,
-    tuitionRoomBoard: 42514,
-    scholarships: [],
-    scholarshipNote: "Deferred — no scholarship yet",
-    medianIncome: 78265,
-    ratings: { affordability: 5, academic: 10, townVibe: 6, medianIncome: 9, roi: 7 },
-    notes: {
-      affordability:
-        "~$42,514/yr tuition + room & board (out-of-state). Purdue has maintained a tuition freeze since 2012. Deferred admission — no scholarship yet. Strong co-op/internship opportunities offset costs.",
-      academic:
-        "#4 ranked Materials Engineering program in the US (US News 2024). One of the top engineering schools in the country. Highly rigorous.",
-      townVibe:
-        "Classic Midwest college town. West Lafayette is smaller and focused around campus. Strong engineering culture, lots of industry recruiting on campus.",
-      townVibeSource: "Niche.com, Purdue student reviews, Visit Greater Lafayette",
-      medianIncome:
-        "Purdue Materials Engineering grads earn ~$74,000–$78,265/yr starting salary — above the national average of $74,110 for all Materials Eng BS recipients. #4 ranked program drives strong employer demand.",
-      medianIncomeSource: "College Factual, Purdue Center for Career Opportunities, PayScale",
-      roi:
-        "4-year cost without scholarships: ~$170,056. High upfront cost, but top-4 ranked Materials Eng program commands premium starting salaries ($78k+). Strong co-op program can offset costs. Deferred status means scholarship potential remains.",
-      roiSource: "Calculated from Purdue tuition data and College Factual salary data",
-      materialsEng: true,
-    },
-  },
-  {
     id: 3,
     name: "University of Montana",
     shortName: "U of M",
