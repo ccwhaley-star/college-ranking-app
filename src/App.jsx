@@ -24,6 +24,7 @@ const initialSchools = [
     hasMaterialsEng: "concentration",
     nicheGrade: "A",
     nicheRank: "#130 National",
+    usNewsRank: "#143 National Universities",
     materialsEngRank: "N/A — concentration only",
     tuitionRoomBoard: 25510,
     scholarships: [
@@ -60,6 +61,7 @@ const initialSchools = [
     hasMaterialsEng: false,
     nicheGrade: "B",
     nicheRank: "#736 National",
+    usNewsRank: "#363 National Universities",
     materialsEngRank: "N/A — no program",
     tuitionRoomBoard: 49404,
     scholarships: [
@@ -95,6 +97,7 @@ const initialSchools = [
     hasMaterialsEng: true,
     nicheGrade: "A",
     nicheRank: "#80 National",
+    usNewsRank: "#75 National Universities",
     materialsEngRank: "#50 US News (Eng. overall)",
     tuitionRoomBoard: 56602,
     scholarships: [],
@@ -128,6 +131,7 @@ const initialSchools = [
     hasMaterialsEng: true,
     nicheGrade: "A",
     nicheRank: "#97 National",
+    usNewsRank: "#127 National Universities",
     materialsEngRank: "Not ranked separately",
     tuitionRoomBoard: 64052,
     scholarships: [
@@ -163,6 +167,7 @@ const initialSchools = [
     hasMaterialsEng: false,
     nicheGrade: "B+",
     nicheRank: "#75 Community Colleges",
+    usNewsRank: "#128 Community Colleges",
     materialsEngRank: "N/A",
     tuitionRoomBoard: 3030,
     tuitionLabel: "Tuition + Fees (commuter)",
@@ -198,6 +203,7 @@ const initialSchools = [
     hasMaterialsEng: true,
     nicheGrade: "A",
     nicheRank: "#110 National",
+    usNewsRank: "#117 National Universities",
     materialsEngRank: "#43 US News (Graduate), #26 Public",
     tuitionRoomBoard: 55091,
     scholarships: [],
@@ -231,6 +237,7 @@ const initialSchools = [
     hasMaterialsEng: true,
     nicheGrade: "A+",
     nicheRank: "#30 National, #5 Public",
+    usNewsRank: "#30 National Universities",
     materialsEngRank: "Top 10 Public (US News)",
     tuitionRoomBoard: 48700,
     scholarships: [],
@@ -264,6 +271,7 @@ const initialSchools = [
     hasMaterialsEng: true,
     nicheGrade: "A",
     nicheRank: "#124 National",
+    usNewsRank: "#151 National Universities",
     materialsEngRank: "#53 National, #1 in Utah",
     tuitionRoomBoard: 45233,
     scholarships: [],
@@ -580,6 +588,12 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 4, fontSize: 11, color: "#6b7280" }}>
               {school.nicheGrade && (
                 <span>Niche: <strong style={{ color: "#111827" }}>{school.nicheGrade}</strong> ({school.nicheRank})</span>
+              )}
+              {school.usNewsRank && (
+                <>
+                  <span style={{ color: "#d1d5db" }}>|</span>
+                  <span>US News: <strong style={{ color: "#111827" }}>{school.usNewsRank}</strong></span>
+                </>
               )}
               {school.materialsEngRank && (
                 <>
