@@ -279,6 +279,80 @@ const initialSchools = [
       materialsEng: true,
     },
   },
+  {
+    id: 10,
+    name: "Iowa State University",
+    shortName: "ISU",
+    location: "Ames, IA",
+    logo: "/logos/iowastate.png",
+    schoolColor: "#C8102E",
+    isKansas: false,
+    hasMaterialsEng: true,
+    nicheGrade: "A",
+    nicheRank: "#126 National",
+    usNewsRank: "#117 National Universities",
+    materialsEngRank: "#41 National, #1 in Iowa",
+    tuitionRoomBoard: 41068,
+    scholarships: [],
+    medianIncome: 65831,
+    ratings: { affordability: 5, academic: 7, townVibe: 7, medianIncome: 6, roi: 6, nationalRanking: 5 },
+    notes: {
+      affordability:
+        "~$41,068/yr tuition + room & board (out-of-state). No scholarships yet. ISU offers competitive merit awards. One of the more affordable Big 12 engineering schools for out-of-state students.",
+      academic:
+        "Dedicated Department of Materials Science and Engineering with ABET-accredited BS in Materials Engineering. Three specialization tracks: ceramic, metallic, and polymeric materials. Concurrent BS/MS and BS/MEng pathways available. US News #49 Best Engineering Schools (grad).",
+      townVibe:
+        "Classic Midwestern college town (~59k population), 30 miles north of Des Moines. Walkable campus area with active bar/restaurant scene. Miles of bike trails, outdoor art installations. Safe, affordable, and unpretentious — classic Big 12 Midwest energy. Frequently in top-10 college town lists.",
+      townVibeSource: "Niche.com, Visit Ames, ISU student reviews",
+      medianIncome:
+        "ISU Materials Engineering BS grads earn ~$65,831/yr early career (College Factual) — below the national field median of ~$74,110. Broader ISU engineering grads range $59k–$71k depending on discipline.",
+      medianIncomeSource: "College Factual, PayScale, ISU Career Services",
+      roi:
+        "4-year cost without scholarships: ~$164,272. Dedicated MSE program with solid but below-average starting salaries ($66k vs $74k national median). Good value if merit scholarships are secured. Concurrent BS/MS option adds value.",
+      roiSource: "Calculated from ISU tuition data and College Factual salary data",
+      nationalRanking:
+        "US News #117 National Universities. Niche grade: A, #126 nationally. Strong STEM-focused R1 research university. Big 12 school with growing engineering reputation.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEng: true,
+    },
+  },
+  {
+    id: 11,
+    name: "Penn State University",
+    shortName: "PSU",
+    location: "State College, PA",
+    logo: "/logos/pennstate.png",
+    schoolColor: "#041E42",
+    isKansas: false,
+    hasMaterialsEng: true,
+    nicheGrade: "A+",
+    nicheRank: "#77 National",
+    usNewsRank: "#59 National Universities, #26 Public",
+    materialsEngRank: "#9 US News (Graduate), #10-12 Undergrad",
+    tuitionRoomBoard: 56740,
+    scholarships: [],
+    medianIncome: 75000,
+    ratings: { affordability: 3, academic: 9, townVibe: 8, medianIncome: 8, roi: 6, nationalRanking: 8 },
+    notes: {
+      affordability:
+        "~$56,740/yr tuition + room & board (out-of-state). No scholarships yet. One of the pricier options. Penn State offers merit and need-based aid — worth applying early.",
+      academic:
+        "Elite Materials Science & Engineering program — US News #9 graduate, #10-12 undergraduate. ABET accredited BS requires 131 credits. Over 60% of undergrads participate in faculty research. International internship opportunities in Europe and Asia. College of Earth and Mineral Sciences.",
+      townVibe:
+        "State College ('Happy Valley') is a classic college town (~42k residents) nestled in the Appalachian mountains. Downtown blends directly into campus. Beaver Stadium seats 106,000+ — one of the biggest game-day atmospheres in college sports. Walkable, safe, cozy community with solid restaurants and bars. State forests and trails minutes away.",
+      townVibeSource: "Niche.com, Visit Penn State, PSU student reviews",
+      medianIncome:
+        "Penn State engineering grads earn $57,000–$83,000+ starting depending on major. Materials engineers nationally average ~$75,000 early career. BLS national median for all materials engineers: $108,310. Top-10 MSE program commands strong employer demand.",
+      medianIncomeSource: "Penn State Career Services, BLS Occupational Outlook, PayScale",
+      roi:
+        "4-year cost without scholarships: ~$226,960. Premium price but top-10 MSE program with strong salary outcomes ($75k+). Elite research opportunities and employer brand recognition. Scholarship potential could significantly improve value.",
+      roiSource: "Calculated from Penn State tuition data and BLS/PayScale salary data",
+      nationalRanking:
+        "US News #59 National Universities, #26 Public. Niche grade: A+, #77 nationally. One of the most prestigious public universities in the country. Top-10 MSE program. Massive alumni network and employer recognition.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEng: true,
+    },
+  },
 ];
 
 const CRITERIA = [
