@@ -644,21 +644,21 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
                 </span>
               )}
             </div>
-            {/* Niche & Materials Eng Rankings */}
+            {/* Rankings */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 4, fontSize: 11, color: "#6b7280" }}>
+              {school.materialsEngRank && (
+                <span>Mat. Eng: <strong style={{ color: "#111827" }}>{school.materialsEngRank}</strong></span>
+              )}
               {school.nicheGrade && (
-                <span>Niche: <strong style={{ color: "#111827" }}>{school.nicheGrade}</strong> ({school.nicheRank})</span>
+                <>
+                  <span style={{ color: "#d1d5db" }}>|</span>
+                  <span>Niche: <strong style={{ color: "#111827" }}>{school.nicheGrade}</strong> ({school.nicheRank})</span>
+                </>
               )}
               {school.usNewsRank && (
                 <>
                   <span style={{ color: "#d1d5db" }}>|</span>
                   <span>US News: <strong style={{ color: "#111827" }}>{school.usNewsRank}</strong></span>
-                </>
-              )}
-              {school.materialsEngRank && (
-                <>
-                  <span style={{ color: "#d1d5db" }}>|</span>
-                  <span>Mat. Eng: <strong style={{ color: "#111827" }}>{school.materialsEngRank}</strong></span>
                 </>
               )}
             </div>
