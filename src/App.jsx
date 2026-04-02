@@ -110,7 +110,7 @@ const initialSchools = [
     nicheGrade: "A",
     nicheRank: "#80 National",
     usNewsRank: "#75 National Universities",
-    materialsEngRank: "#50 US News (Eng. overall)",
+    materialsEngRank: "Undergrad program available",
     tuitionRoomBoard: 56602,
     scholarships: [],
     medianIncome: 75000,
@@ -133,7 +133,7 @@ const initialSchools = [
         "US News #75 National Universities. Niche grade: A, #80 nationally (Niche #1 in South Carolina). Strong ACC school with growing national reputation, especially in engineering.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEngRating:
-        "Full Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. US News #50 overall engineering (grad). ACC school with solid research reputation in advanced materials.",
+        "Full Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. ACC school with solid research reputation in advanced materials.",
       materialsEngRatingSource: "Clemson MSE Department, US News",
       materialsEng: true,
     },
@@ -192,7 +192,7 @@ const initialSchools = [
     nicheGrade: "A",
     nicheRank: "#110 National",
     usNewsRank: "#117 National Universities",
-    materialsEngRank: "#43 US News (Graduate), #26 Public",
+    materialsEngRank: "#36 College Factual, #1 in AZ",
     tuitionRoomBoard: 55091,
     scholarships: [],
     medianIncome: 77646,
@@ -201,7 +201,7 @@ const initialSchools = [
       affordability:
         "~$55,091/yr tuition + room & board (out-of-state). No scholarships yet. ASU offers competitive merit awards — worth applying. #1 Most Innovative University 11 years running.",
       academic:
-        "Full BSE in Materials Science and Engineering through SEMTE. US News #43 graduate MSE ranking, #26 among public universities. R1 research university with massive resources (~75,000+ students).",
+        "Full BSE in Materials Science and Engineering through SEMTE. College Factual #36 undergraduate MSE nationally, #1 in Arizona. R1 research university with massive resources (~75,000+ students).",
       townVibe:
         "Tempe is a quintessential large college town — Mill Avenue has 100+ bars, restaurants, and shops adjacent to campus. Sunny desert climate year-round. Phoenix metro access for big-city amenities. Strong tech/innovation economy.",
       townVibeSource: "Niche.com, Livability.com, ASU student reviews, Visit Tempe",
@@ -215,7 +215,7 @@ const initialSchools = [
         "US News #117 National Universities. Niche grade: A, #110 nationally. #1 Most Innovative University for 11 consecutive years (ahead of MIT and Stanford). Massive research university with strong industry ties.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEngRating:
-        "Full BSE in Materials Science and Engineering through SEMTE. US News #43 graduate MSE, #26 among public universities. Strong research focus with #1 Most Innovative University designation driving cutting-edge materials research.",
+        "Full BSE in Materials Science and Engineering through SEMTE. College Factual #36 undergraduate MSE nationally, #1 in Arizona. Strong research focus with #1 Most Innovative University designation driving cutting-edge materials research.",
       materialsEngRatingSource: "ASU SEMTE, US News",
       materialsEng: true,
     },
@@ -232,7 +232,7 @@ const initialSchools = [
     nicheGrade: "A+",
     nicheRank: "#30 National, #5 Public",
     usNewsRank: "#30 National Universities",
-    materialsEngRank: "Top 10 Public (US News)",
+    materialsEngRank: "#7 College Factual, #20 US News Undergrad",
     tuitionRoomBoard: 48700,
     scholarships: [],
     medianIncome: 79200,
@@ -272,7 +272,7 @@ const initialSchools = [
     nicheGrade: "A",
     nicheRank: "#124 National",
     usNewsRank: "#151 National Universities",
-    materialsEngRank: "#53 National, #1 in Utah",
+    materialsEngRank: "Undergrad program available, #1 in UT",
     tuitionRoomBoard: 45233,
     scholarships: [],
     medianIncome: 75977,
@@ -321,7 +321,7 @@ const initialSchools = [
       affordability:
         "~$41,068/yr tuition + room & board (out-of-state). No scholarships yet. ISU offers competitive merit awards. One of the more affordable Big 12 engineering schools for out-of-state students.",
       academic:
-        "Dedicated Department of Materials Science and Engineering with ABET-accredited BS in Materials Engineering. Three specialization tracks: ceramic, metallic, and polymeric materials. Concurrent BS/MS and BS/MEng pathways available. US News #49 Best Engineering Schools (grad).",
+        "Dedicated Department of Materials Science and Engineering with ABET-accredited BS in Materials Engineering. Three specialization tracks: ceramic, metallic, and polymeric materials. College Factual #41 undergraduate MSE nationally, #1 in Iowa. Concurrent BS/MS and BS/MEng pathways available.",
       townVibe:
         "Classic Midwestern college town (~59k population), 30 miles north of Des Moines. Walkable campus area with active bar/restaurant scene. Miles of bike trails, outdoor art installations. Safe, affordable, and unpretentious — classic Big 12 Midwest energy. Frequently in top-10 college town lists.",
       townVibeSource: "Niche.com, Visit Ames, ISU student reviews",
@@ -352,7 +352,7 @@ const initialSchools = [
     nicheGrade: "A+",
     nicheRank: "#77 National",
     usNewsRank: "#59 National Universities, #26 Public",
-    materialsEngRank: "#9 US News (Graduate), #10-12 Undergrad",
+    materialsEngRank: "#10-12 US News Undergrad",
     tuitionRoomBoard: 56740,
     scholarships: [],
     medianIncome: 75000,
@@ -361,7 +361,7 @@ const initialSchools = [
       affordability:
         "~$56,740/yr tuition + room & board (out-of-state). No scholarships yet. One of the pricier options. Penn State offers merit and need-based aid — worth applying early.",
       academic:
-        "Elite Materials Science & Engineering program — US News #9 graduate, #10-12 undergraduate. ABET accredited BS requires 131 credits. Over 60% of undergrads participate in faculty research. International internship opportunities in Europe and Asia. College of Earth and Mineral Sciences.",
+        "Elite Materials Science & Engineering program — US News #10-12 undergraduate. ABET accredited BS requires 131 credits. Over 60% of undergrads participate in faculty research. International internship opportunities in Europe and Asia. College of Earth and Mineral Sciences.",
       townVibe:
         "State College ('Happy Valley') is a classic college town (~42k residents) nestled in the Appalachian mountains. Downtown blends directly into campus. Beaver Stadium seats 106,000+ — one of the biggest game-day atmospheres in college sports. Walkable, safe, cozy community with solid restaurants and bars. State forests and trails minutes away.",
       townVibeSource: "Niche.com, Visit Penn State, PSU student reviews",
@@ -375,7 +375,7 @@ const initialSchools = [
         "US News #59 National Universities, #26 Public. Niche grade: A+, #77 nationally. One of the most prestigious public universities in the country. Top-10 MSE program. Massive alumni network and employer recognition.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEngRating:
-        "Elite MSE program — US News #9 graduate, #10-12 undergraduate. ABET accredited BS (131 credits). Over 60% of undergrads participate in faculty research. International internship opportunities. One of the top Materials Engineering programs in the country.",
+        "Elite MSE program — US News #10-12 undergraduate. ABET accredited BS (131 credits). Over 60% of undergrads participate in faculty research. International internship opportunities. One of the top undergraduate Materials Engineering programs in the country.",
       materialsEngRatingSource: "Penn State MatSE Department, US News",
       materialsEng: true,
     },
