@@ -22,6 +22,9 @@ const initialSchools = [
     schoolColor: "#0051BA",
     isKansas: true,
     hasMaterialsEng: "concentration",
+    nicheGrade: "A",
+    nicheRank: "#130 National",
+    materialsEngRank: "N/A — concentration only",
     tuitionRoomBoard: 25510,
     scholarships: [
       { name: "Chancellor's Scholarship", amount: 5000 },
@@ -55,6 +58,9 @@ const initialSchools = [
     schoolColor: "#660033",
     isKansas: false,
     hasMaterialsEng: false,
+    nicheGrade: "B",
+    nicheRank: "#736 National",
+    materialsEngRank: "N/A — no program",
     tuitionRoomBoard: 49404,
     scholarships: [
       { name: "Scholarship", amount: 15000 },
@@ -87,6 +93,9 @@ const initialSchools = [
     schoolColor: "#F56600",
     isKansas: false,
     hasMaterialsEng: true,
+    nicheGrade: "A",
+    nicheRank: "#80 National",
+    materialsEngRank: "#50 US News (Eng. overall)",
     tuitionRoomBoard: 56602,
     scholarships: [],
     medianIncome: 75000,
@@ -117,6 +126,9 @@ const initialSchools = [
     schoolColor: "#73000A",
     isKansas: false,
     hasMaterialsEng: true,
+    nicheGrade: "A",
+    nicheRank: "#97 National",
+    materialsEngRank: "Not ranked separately",
     tuitionRoomBoard: 64052,
     scholarships: [
       { name: "Scholarship", amount: 10697 },
@@ -149,6 +161,9 @@ const initialSchools = [
     schoolColor: "#003768",
     isKansas: true,
     hasMaterialsEng: false,
+    nicheGrade: "B+",
+    nicheRank: "#75 Community Colleges",
+    materialsEngRank: "N/A",
     tuitionRoomBoard: 3030,
     tuitionLabel: "Tuition + Fees (commuter)",
     scholarships: [],
@@ -170,6 +185,105 @@ const initialSchools = [
         "2-year cost: ~$6,060 (tuition only, living at home). Extremely low investment. However, it's a transfer pathway — would need 2+ more years at a 4-year university to complete a bachelor's in engineering. Total 4-year cost depends on transfer destination. Best value as a stepping stone.",
       roiSource: "JCCC tuition data, DOE College Scorecard salary data",
       materialsEng: false,
+    },
+  },
+  {
+    id: 7,
+    name: "Arizona State University",
+    shortName: "ASU",
+    location: "Tempe, AZ",
+    logo: "/logos/asu.png",
+    schoolColor: "#8C1D40",
+    isKansas: false,
+    hasMaterialsEng: true,
+    nicheGrade: "A",
+    nicheRank: "#110 National",
+    materialsEngRank: "#43 US News (Graduate), #26 Public",
+    tuitionRoomBoard: 55091,
+    scholarships: [],
+    medianIncome: 77646,
+    ratings: { affordability: 4, academic: 7, townVibe: 8, medianIncome: 8, roi: 6 },
+    notes: {
+      affordability:
+        "~$55,091/yr tuition + room & board (out-of-state). No scholarships yet. ASU offers competitive merit awards — worth applying. #1 Most Innovative University 11 years running.",
+      academic:
+        "Full BSE in Materials Science and Engineering through SEMTE. US News #43 graduate MSE ranking, #26 among public universities. R1 research university with massive resources (~75,000+ students).",
+      townVibe:
+        "Tempe is a quintessential large college town — Mill Avenue has 100+ bars, restaurants, and shops adjacent to campus. Sunny desert climate year-round. Phoenix metro access for big-city amenities. Strong tech/innovation economy.",
+      townVibeSource: "Niche.com, Livability.com, ASU student reviews, Visit Tempe",
+      medianIncome:
+        "ASU MSE bachelor's grads earn ~$77,646/yr early career — above the national average of $74,110 for Materials Eng BS recipients. MSE master's grads earn ~$108,956 median.",
+      medianIncomeSource: "College Factual, PayScale, ASU Career Services",
+      roi:
+        "4-year cost without scholarships: ~$220,364. Strong MSE program with good starting salaries ($78k). Innovation ranking (#1, 11 years) signals strong employer relationships. Merit scholarship potential could significantly improve ROI.",
+      roiSource: "Calculated from ASU tuition data and College Factual salary data",
+      materialsEng: true,
+    },
+  },
+  {
+    id: 8,
+    name: "University of Florida",
+    shortName: "UF",
+    location: "Gainesville, FL",
+    logo: "/logos/uf.png",
+    schoolColor: "#0021A5",
+    isKansas: false,
+    hasMaterialsEng: true,
+    nicheGrade: "A+",
+    nicheRank: "#30 National, #5 Public",
+    materialsEngRank: "Top 10 Public (US News)",
+    tuitionRoomBoard: 48700,
+    scholarships: [],
+    medianIncome: 79200,
+    ratings: { affordability: 4, academic: 9, townVibe: 8, medianIncome: 9, roi: 7 },
+    notes: {
+      affordability:
+        "~$48,700/yr tuition + room & board (out-of-state). No scholarships yet. UF is #7 public university — strong merit scholarship opportunities for high-achieving students.",
+      academic:
+        "Full BS in Materials Science and Engineering (ABET accredited) through Herbert Wertheim College of Engineering. US News #30 nationally, #7 public. Top 10 public MSE program. Niche #20 Best Engineering.",
+      townVibe:
+        "Classic Southern college town — Gainesville revolves around UF. Affordable cost of living, vibrant downtown with bars, restaurants, music venues, and street markets. Surrounded by natural springs and state parks. Warm/humid Florida climate.",
+      townVibeSource: "Niche.com, Visit Gainesville, UF student reviews",
+      medianIncome:
+        "UF MSE bachelor's grads earn ~$79,200/yr early career — above the national average. Overall UF grad median salary: $72,340/yr (2024-25). Strong employer demand from top-7 public university.",
+      medianIncomeSource: "College Factual, UF Career Connections Center, PayScale",
+      roi:
+        "4-year cost without scholarships: ~$194,800. Best-ranked school in the group (#30 national, #7 public) with strong MSE salaries ($79k). Excellent value if merit scholarships are secured.",
+      roiSource: "Calculated from UF tuition data and College Factual salary data",
+      materialsEng: true,
+    },
+  },
+  {
+    id: 9,
+    name: "University of Utah",
+    shortName: "U of U",
+    location: "Salt Lake City, UT",
+    logo: "/logos/utah.png",
+    schoolColor: "#CC0000",
+    isKansas: false,
+    hasMaterialsEng: true,
+    nicheGrade: "A",
+    nicheRank: "#124 National",
+    materialsEngRank: "#53 National, #1 in Utah",
+    tuitionRoomBoard: 45233,
+    scholarships: [],
+    medianIncome: 75977,
+    ratings: { affordability: 5, academic: 7, townVibe: 9, medianIncome: 8, roi: 7 },
+    notes: {
+      affordability:
+        "~$45,233/yr tuition + room & board (out-of-state). No scholarships yet. Offers unique BS in Metallurgical Engineering alongside MSE. Combined BS/MS program available.",
+      academic:
+        "Full BS in Materials Science and Engineering (ABET accredited) plus unique Metallurgical Engineering BS. Three emphases: Materials for Energy, Biomedical Materials, Semiconductors. College Factual #53 nationally, #1 in Utah.",
+      townVibe:
+        "Salt Lake City offers big-city amenities plus world-class outdoor recreation. Campus sits in Wasatch Mountain foothills. World-class ski resorts (Alta, Snowbird, Park City) 30-45 min away. Progressive urban culture despite conservative state. Fast-growing tech economy ('Silicon Slopes').",
+      townVibeSource: "Niche.com, Visit Salt Lake, U of Utah student reviews",
+      medianIncome:
+        "U of Utah MSE bachelor's grads earn ~$75,977/yr early career. MSE/Metallurgical Engineering grads (3 years out): ~$89,200 median. ~50% of MSE undergrads receive job offers before graduation.",
+      medianIncomeSource: "College Factual, U of Utah Career Services, PayScale",
+      roi:
+        "4-year cost without scholarships: ~$180,932. Strong MSE program with solid salaries ($76k). Unique Metallurgical Eng option. Combined BS/MS available. Lower sticker price than Clemson/USC with comparable outcomes.",
+      roiSource: "Calculated from U of Utah tuition data and College Factual salary data",
+      materialsEng: true,
     },
   },
 ];
@@ -341,8 +455,8 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
 
   const totalScholarship = (school.scholarships || []).reduce((sum, s) => sum + s.amount, 0);
 
-  const rankColors = ["#f59e0b", "#9ca3af", "#cd7c2f", "#6366f1", "#6366f1", "#6366f1"];
-  const rankLabels = ["\u{1F947}", "\u{1F948}", "\u{1F949}", "4th", "5th", "6th"];
+  const rankColors = ["#f59e0b", "#9ca3af", "#cd7c2f", "#6366f1", "#6366f1", "#6366f1", "#6366f1", "#6366f1", "#6366f1"];
+  const rankLabels = ["\u{1F947}", "\u{1F948}", "\u{1F949}", "4th", "5th", "6th", "7th", "8th", "9th"];
 
   return (
     <div
@@ -460,6 +574,18 @@ function SchoolCard({ school, rank, onRatingChange, weights, isMobile }) {
                 >
                   MAT. ENG CONC.
                 </span>
+              )}
+            </div>
+            {/* Niche & Materials Eng Rankings */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 4, fontSize: 11, color: "#6b7280" }}>
+              {school.nicheGrade && (
+                <span>Niche: <strong style={{ color: "#111827" }}>{school.nicheGrade}</strong> ({school.nicheRank})</span>
+              )}
+              {school.materialsEngRank && (
+                <>
+                  <span style={{ color: "#d1d5db" }}>|</span>
+                  <span>Mat. Eng: <strong style={{ color: "#111827" }}>{school.materialsEngRank}</strong></span>
+                </>
               )}
             </div>
           </div>
