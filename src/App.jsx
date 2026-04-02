@@ -139,48 +139,6 @@ const initialSchools = [
     },
   },
   {
-    id: 6,
-    name: "Johnson County Community College",
-    shortName: "JCCC",
-    location: "Overland Park, KS",
-    logo: "/logos/jccc.png",
-    schoolColor: "#003768",
-    isKansas: true,
-    hasMaterialsEng: false,
-    nicheGrade: "B+",
-    nicheRank: "#75 Community Colleges",
-    usNewsRank: "#128 Community Colleges",
-    materialsEngRank: "N/A",
-    tuitionRoomBoard: 3030,
-    tuitionLabel: "Tuition + Fees (commuter)",
-    scholarships: [],
-    scholarshipNote: "Living at home — no room & board",
-    medianIncome: 36600,
-    ratings: { affordability: 10, academic: 4, townVibe: 5, medianIncome: 2, roi: 6, nationalRanking: 2, materialsEngRating: 1 },
-    notes: {
-      affordability:
-        "~$3,030/yr in-district tuition + fees (30 credit hours at $101/hr). No room & board — commuter college, Charlotte would live at home. By far the most affordable option. Books ~$1,560/yr additional.",
-      academic:
-        "One of the largest community colleges in the KC metro. Ranked #4 out of 44 Kansas colleges. Offers engineering transfer pathway (not a degree) — foundational courses before transferring to KU, K-State, or WSU for specialization. Smaller class sizes. No Materials Engineering program.",
-      townVibe:
-        "Overland Park is a large suburb (200k+ population) — safe, family-friendly, excellent amenities. Ranked #6 on Livability.com's 2025 Best Places to Live. Car-dependent. Great restaurants and parks, but limited nightlife (KC proper for that). Not a traditional college town experience.",
-      townVibeSource: "Livability.com 2025 rankings, Niche.com, Experience Overland Park",
-      medianIncome:
-        "JCCC graduates earn median ~$29,900/yr two years post-graduation and ~$36,600/yr six years out. Those who transfer and complete a bachelor's earn ~$45,387/yr early career. No Materials Eng program — income reflects associate's-level earnings across all majors.",
-      medianIncomeSource: "JCCC Institutional Research Post-Graduate Report, DOE College Scorecard",
-      roi:
-        "2-year cost: ~$6,060 (tuition only, living at home). Extremely low investment. However, it's a transfer pathway — would need 2+ more years at a 4-year university to complete a bachelor's in engineering. Total 4-year cost depends on transfer destination. Best value as a stepping stone.",
-      roiSource: "JCCC tuition data, DOE College Scorecard salary data",
-      nationalRanking:
-        "Niche grade: B+, #75 Best Community Colleges. US News #128 Community Colleges, #1 in Kansas. Excellent transfer pathway — not directly comparable to 4-year universities.",
-      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
-      materialsEngRating:
-        "No Materials Engineering program. Community college offering engineering transfer pathway — foundational courses before transferring to a 4-year university for specialization.",
-      materialsEngRatingSource: "JCCC Course Catalog",
-      materialsEng: false,
-    },
-  },
-  {
     id: 7,
     name: "Arizona State University",
     shortName: "ASU",
