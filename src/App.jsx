@@ -110,7 +110,7 @@ const initialSchools = [
     nicheGrade: "A",
     nicheRank: "#80 National",
     usNewsRank: "#75 National Universities",
-    materialsEngRank: "Undergrad program available",
+    materialsEngRank: "#33 Undergrad (best-engineering-colleges.com)",
     tuitionRoomBoard: 56602,
     scholarships: [],
     medianIncome: 75000,
@@ -133,7 +133,7 @@ const initialSchools = [
         "US News #75 National Universities. Niche grade: A, #80 nationally (Niche #1 in South Carolina). Strong ACC school with growing national reputation, especially in engineering.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEngRating:
-        "Full Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. ACC school with solid research reputation in advanced materials.",
+        "Full Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. #33 nationally in undergraduate Materials Engineering (best-engineering-colleges.com). #1 in South Carolina. ACC school with solid research reputation.",
       materialsEngRatingSource: "Clemson MSE Department, US News",
       materialsEng: true,
     },
