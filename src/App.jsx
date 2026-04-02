@@ -946,7 +946,7 @@ export default function CollegeRanker() {
                     </span>
                     <input
                       type="range"
-                      min="1"
+                      min="0"
                       max="3"
                       step="0.5"
                       value={weights[c.key]}
