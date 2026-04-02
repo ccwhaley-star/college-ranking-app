@@ -32,7 +32,7 @@ const initialSchools = [
       { name: "Engineering Scholarship", amount: 1500 },
     ],
     medianIncome: 63500,
-    ratings: { affordability: 9, academic: 7, townVibe: 8, medianIncome: 6, roi: 7, nationalRanking: 4 },
+    ratings: { affordability: 9, academic: 7, townVibe: 8, medianIncome: 6, roi: 7, nationalRanking: 4, materialsEngRating: 3 },
     notes: {
       affordability:
         "~$25,510/yr tuition + room & board (in-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off. After scholarships: ~$19,010/yr.",
@@ -50,6 +50,9 @@ const initialSchools = [
       nationalRanking:
         "US News #143 National Universities. Niche grade: A, #130 nationally. R1 research university with strong regional reputation, especially in the Midwest. Solid but not elite national standing.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Offers a concentration in Materials Engineering within Chemical Engineering — not a standalone degree. No dedicated MSE department. Related coursework available through Mechanical and Chemical Engineering programs.",
+      materialsEngRatingSource: "KU School of Engineering",
       materialsEng: "concentration",
     },
   },
@@ -71,7 +74,7 @@ const initialSchools = [
       { name: "Scholarship", amount: 15000 },
     ],
     medianIncome: 62208,
-    ratings: { affordability: 5, academic: 5, townVibe: 9, medianIncome: 5, roi: 5, nationalRanking: 2 },
+    ratings: { affordability: 5, academic: 5, townVibe: 9, medianIncome: 5, roi: 5, nationalRanking: 2, materialsEngRating: 2 },
     notes: {
       affordability:
         "~$48,262/yr tuition + room & board (out-of-state). $15,000/yr scholarship brings it down to ~$33,262/yr. Strong engineering school with 12+ engineering disciplines.",
@@ -89,6 +92,9 @@ const initialSchools = [
       nationalRanking:
         "US News #318 National Universities, #170 Public Schools. Niche grade: B+, #403 nationally, #2 in Montana. Growing R2 research university with strong engineering and agriculture programs.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "No undergraduate Materials Engineering degree. Materials Science is graduate-level only (MS/PhD in collaboration with Montana Tech). Strong Mechanical and Chemical Engineering undergrad programs available as alternatives.",
+      materialsEngRatingSource: "MSU College of Engineering",
       materialsEng: false,
     },
   },
@@ -108,7 +114,7 @@ const initialSchools = [
     tuitionRoomBoard: 56602,
     scholarships: [],
     medianIncome: 75000,
-    ratings: { affordability: 3, academic: 8, townVibe: 7, medianIncome: 8, roi: 5, nationalRanking: 7 },
+    ratings: { affordability: 3, academic: 8, townVibe: 7, medianIncome: 8, roi: 5, nationalRanking: 7, materialsEngRating: 7 },
     notes: {
       affordability:
         "~$56,602/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
@@ -126,6 +132,9 @@ const initialSchools = [
       nationalRanking:
         "US News #75 National Universities. Niche grade: A, #80 nationally (Niche #1 in South Carolina). Strong ACC school with growing national reputation, especially in engineering.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Full Materials Science & Engineering BS program with unique focus on textiles, ceramics, and optical materials. US News #50 overall engineering (grad). ACC school with solid research reputation in advanced materials.",
+      materialsEngRatingSource: "Clemson MSE Department, US News",
       materialsEng: true,
     },
   },
@@ -147,7 +156,7 @@ const initialSchools = [
     scholarships: [],
     scholarshipNote: "Living at home — no room & board",
     medianIncome: 36600,
-    ratings: { affordability: 10, academic: 4, townVibe: 5, medianIncome: 2, roi: 6, nationalRanking: 2 },
+    ratings: { affordability: 10, academic: 4, townVibe: 5, medianIncome: 2, roi: 6, nationalRanking: 2, materialsEngRating: 1 },
     notes: {
       affordability:
         "~$3,030/yr in-district tuition + fees (30 credit hours at $101/hr). No room & board — commuter college, Charlotte would live at home. By far the most affordable option. Books ~$1,560/yr additional.",
@@ -165,6 +174,9 @@ const initialSchools = [
       nationalRanking:
         "Niche grade: B+, #75 Best Community Colleges. US News #128 Community Colleges, #1 in Kansas. Excellent transfer pathway — not directly comparable to 4-year universities.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "No Materials Engineering program. Community college offering engineering transfer pathway — foundational courses before transferring to a 4-year university for specialization.",
+      materialsEngRatingSource: "JCCC Course Catalog",
       materialsEng: false,
     },
   },
@@ -184,7 +196,7 @@ const initialSchools = [
     tuitionRoomBoard: 55091,
     scholarships: [],
     medianIncome: 77646,
-    ratings: { affordability: 4, academic: 7, townVibe: 8, medianIncome: 8, roi: 6, nationalRanking: 5 },
+    ratings: { affordability: 4, academic: 7, townVibe: 8, medianIncome: 8, roi: 6, nationalRanking: 5, materialsEngRating: 7 },
     notes: {
       affordability:
         "~$55,091/yr tuition + room & board (out-of-state). No scholarships yet. ASU offers competitive merit awards — worth applying. #1 Most Innovative University 11 years running.",
@@ -202,6 +214,9 @@ const initialSchools = [
       nationalRanking:
         "US News #117 National Universities. Niche grade: A, #110 nationally. #1 Most Innovative University for 11 consecutive years (ahead of MIT and Stanford). Massive research university with strong industry ties.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Full BSE in Materials Science and Engineering through SEMTE. US News #43 graduate MSE, #26 among public universities. Strong research focus with #1 Most Innovative University designation driving cutting-edge materials research.",
+      materialsEngRatingSource: "ASU SEMTE, US News",
       materialsEng: true,
     },
   },
@@ -221,7 +236,7 @@ const initialSchools = [
     tuitionRoomBoard: 48700,
     scholarships: [],
     medianIncome: 79200,
-    ratings: { affordability: 4, academic: 9, townVibe: 8, medianIncome: 9, roi: 7, nationalRanking: 9 },
+    ratings: { affordability: 4, academic: 9, townVibe: 8, medianIncome: 9, roi: 7, nationalRanking: 9, materialsEngRating: 9 },
     notes: {
       affordability:
         "~$48,700/yr tuition + room & board (out-of-state). No scholarships yet. UF is #7 public university — strong merit scholarship opportunities for high-achieving students.",
@@ -239,6 +254,9 @@ const initialSchools = [
       nationalRanking:
         "US News #30 National Universities, #7 Public University (8 consecutive years in top 10 publics). Niche grade: A+, #30 nationally, #5 Top Public. Highest-ranked school in Charlotte's list. Top 10 public MSE program.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Full BS in Materials Science and Engineering (ABET accredited) through Herbert Wertheim College of Engineering. Top 10 public MSE program. Niche #20 Best Engineering. Strong research university with excellent MSE outcomes.",
+      materialsEngRatingSource: "UF MSE Department, US News, Niche",
       materialsEng: true,
     },
   },
@@ -258,7 +276,7 @@ const initialSchools = [
     tuitionRoomBoard: 45233,
     scholarships: [],
     medianIncome: 75977,
-    ratings: { affordability: 5, academic: 7, townVibe: 9, medianIncome: 8, roi: 7, nationalRanking: 4 },
+    ratings: { affordability: 5, academic: 7, townVibe: 9, medianIncome: 8, roi: 7, nationalRanking: 4, materialsEngRating: 6 },
     notes: {
       affordability:
         "~$45,233/yr tuition + room & board (out-of-state). No scholarships yet. Offers unique BS in Metallurgical Engineering alongside MSE. Combined BS/MS program available.",
@@ -276,6 +294,9 @@ const initialSchools = [
       nationalRanking:
         "US News #151 National Universities. Niche grade: A, #124 nationally. Flagship state university with growing reputation. College Factual #53 MSE nationally, #1 in Utah. Strong 'Silicon Slopes' tech economy boosts career prospects.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Full BS in Materials Science and Engineering (ABET) plus unique Metallurgical Engineering BS. Three emphases: Materials for Energy, Biomedical Materials, Semiconductors. Combined BS/MS program available. College Factual #53 nationally, #1 in Utah.",
+      materialsEngRatingSource: "U of Utah MSE Department, College Factual",
       materialsEng: true,
     },
   },
@@ -295,7 +316,7 @@ const initialSchools = [
     tuitionRoomBoard: 41068,
     scholarships: [],
     medianIncome: 65831,
-    ratings: { affordability: 5, academic: 7, townVibe: 7, medianIncome: 6, roi: 6, nationalRanking: 5 },
+    ratings: { affordability: 5, academic: 7, townVibe: 7, medianIncome: 6, roi: 6, nationalRanking: 5, materialsEngRating: 7 },
     notes: {
       affordability:
         "~$41,068/yr tuition + room & board (out-of-state). No scholarships yet. ISU offers competitive merit awards. One of the more affordable Big 12 engineering schools for out-of-state students.",
@@ -313,6 +334,9 @@ const initialSchools = [
       nationalRanking:
         "US News #117 National Universities. Niche grade: A, #126 nationally. Strong STEM-focused R1 research university. Big 12 school with growing engineering reputation.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Dedicated Department of Materials Science and Engineering with ABET-accredited BS. Three specialization tracks: ceramic, metallic, and polymeric materials. College Factual #41 nationally, #1 in Iowa. Concurrent BS/MS and BS/MEng pathways available.",
+      materialsEngRatingSource: "ISU MSE Department, College Factual",
       materialsEng: true,
     },
   },
@@ -332,7 +356,7 @@ const initialSchools = [
     tuitionRoomBoard: 56740,
     scholarships: [],
     medianIncome: 75000,
-    ratings: { affordability: 3, academic: 9, townVibe: 8, medianIncome: 8, roi: 6, nationalRanking: 8 },
+    ratings: { affordability: 3, academic: 9, townVibe: 8, medianIncome: 8, roi: 6, nationalRanking: 8, materialsEngRating: 10 },
     notes: {
       affordability:
         "~$56,740/yr tuition + room & board (out-of-state). No scholarships yet. One of the pricier options. Penn State offers merit and need-based aid — worth applying early.",
@@ -350,6 +374,9 @@ const initialSchools = [
       nationalRanking:
         "US News #59 National Universities, #26 Public. Niche grade: A+, #77 nationally. One of the most prestigious public universities in the country. Top-10 MSE program. Massive alumni network and employer recognition.",
       nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
+      materialsEngRating:
+        "Elite MSE program — US News #9 graduate, #10-12 undergraduate. ABET accredited BS (131 credits). Over 60% of undergrads participate in faculty research. International internship opportunities. One of the top Materials Engineering programs in the country.",
+      materialsEngRatingSource: "Penn State MatSE Department, US News",
       materialsEng: true,
     },
   },
@@ -362,6 +389,7 @@ const CRITERIA = [
   { key: "medianIncome", label: "Income", icon: "\u{1F4B5}", color: "#0ea5e9" },
   { key: "roi", label: "Investment Return", icon: "\u{1F4C8}", color: "#8b5cf6" },
   { key: "nationalRanking", label: "National Ranking", icon: "\u{1F3C6}", color: "#dc2626" },
+  { key: "materialsEngRating", label: "Materials Eng.", icon: "\u{1F52C}", color: "#059669" },
 ];
 
 function StarRating({ value, color, isMobile }) {
