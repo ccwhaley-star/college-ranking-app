@@ -32,7 +32,7 @@ const initialSchools = [
       { name: "Engineering Scholarship", amount: 1500 },
     ],
     medianIncome: 63500,
-    ratings: { affordability: 9, academic: 7, townVibe: 8, medianIncome: 6, roi: 7 },
+    ratings: { affordability: 9, academic: 7, townVibe: 8, medianIncome: 6, roi: 7, nationalRanking: 4 },
     notes: {
       affordability:
         "~$25,510/yr tuition + room & board (in-state). Chancellor's Scholarship ($5,000/yr) + $1,500/yr engineering scholarship = $6,500/yr off. After scholarships: ~$19,010/yr.",
@@ -47,6 +47,9 @@ const initialSchools = [
       roi:
         "4-year cost after scholarships: ~$76,040. With an estimated starting salary of $63,500/yr, payback period is relatively short. Strong in-state value, though concentration (not full degree) in Materials Eng may limit specialized earning potential.",
       roiSource: "Calculated from KU tuition data and PayScale salary estimates",
+      nationalRanking:
+        "US News #143 National Universities. Niche grade: A, #130 nationally. R1 research university with strong regional reputation, especially in the Midwest. Solid but not elite national standing.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: "concentration",
     },
   },
@@ -68,7 +71,7 @@ const initialSchools = [
       { name: "Scholarship", amount: 15000 },
     ],
     medianIncome: 52100,
-    ratings: { affordability: 6, academic: 5, townVibe: 9, medianIncome: 4, roi: 4 },
+    ratings: { affordability: 6, academic: 5, townVibe: 9, medianIncome: 4, roi: 4, nationalRanking: 2 },
     notes: {
       affordability:
         "~$49,404/yr tuition + room & board (out-of-state). $15,000/yr scholarship brings it down to ~$34,404/yr. Kansas students do not qualify for WUE.",
@@ -83,6 +86,9 @@ const initialSchools = [
       roi:
         "4-year cost after scholarship: ~$137,616. Without a Materials Eng program, earning potential trails schools with dedicated programs. Beautiful location but weaker financial return for an engineering-focused career path.",
       roiSource: "Calculated from U of Montana tuition data and DOE College Scorecard",
+      nationalRanking:
+        "US News #363 National Universities. Niche grade: B, #736 nationally. Lower national ranking reflects smaller size and regional focus. Strong in environmental science and outdoor-oriented programs.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: false,
     },
   },
@@ -102,7 +108,7 @@ const initialSchools = [
     tuitionRoomBoard: 56602,
     scholarships: [],
     medianIncome: 75000,
-    ratings: { affordability: 3, academic: 8, townVibe: 7, medianIncome: 8, roi: 5 },
+    ratings: { affordability: 3, academic: 8, townVibe: 7, medianIncome: 8, roi: 5, nationalRanking: 7 },
     notes: {
       affordability:
         "~$56,602/yr tuition + room & board (out-of-state). One of the more expensive options. No scholarships yet. Look into merit scholarships — Clemson offers competitive awards.",
@@ -117,6 +123,9 @@ const initialSchools = [
       roi:
         "4-year cost without scholarships: ~$226,408. Strong MSE program with good starting salaries ($75k), but highest sticker price in the group. Merit scholarship potential could significantly improve ROI.",
       roiSource: "Calculated from Clemson tuition data and Clemson MSE department salary reports",
+      nationalRanking:
+        "US News #75 National Universities. Niche grade: A, #80 nationally (Niche #1 in South Carolina). Strong ACC school with growing national reputation, especially in engineering.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: true,
     },
   },
@@ -138,7 +147,7 @@ const initialSchools = [
       { name: "Scholarship", amount: 10697 },
     ],
     medianIncome: 71973,
-    ratings: { affordability: 3, academic: 7, townVibe: 7, medianIncome: 7, roi: 5 },
+    ratings: { affordability: 3, academic: 7, townVibe: 7, medianIncome: 7, roi: 5, nationalRanking: 5 },
     notes: {
       affordability:
         "~$64,052/yr tuition + room & board (out-of-state). $10,697/yr scholarship brings it down to ~$53,355/yr.",
@@ -153,6 +162,9 @@ const initialSchools = [
       roi:
         "4-year cost after scholarship: ~$213,420. Scholarship helps but still one of the higher total costs. Engineering salary outcomes are solid ($72k) but the high sticker price extends the payback period compared to KU or Purdue.",
       roiSource: "Calculated from USC tuition data and College Factual engineering salary data",
+      nationalRanking:
+        "US News #127 National Universities. Niche grade: A, #97 nationally. Flagship state university with solid overall reputation. Good engineering school with nuclear engineering specialty.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: true,
     },
   },
@@ -174,7 +186,7 @@ const initialSchools = [
     scholarships: [],
     scholarshipNote: "Living at home — no room & board",
     medianIncome: 36600,
-    ratings: { affordability: 10, academic: 4, townVibe: 5, medianIncome: 2, roi: 6 },
+    ratings: { affordability: 10, academic: 4, townVibe: 5, medianIncome: 2, roi: 6, nationalRanking: 2 },
     notes: {
       affordability:
         "~$3,030/yr in-district tuition + fees (30 credit hours at $101/hr). No room & board — commuter college, Charlotte would live at home. By far the most affordable option. Books ~$1,560/yr additional.",
@@ -189,6 +201,9 @@ const initialSchools = [
       roi:
         "2-year cost: ~$6,060 (tuition only, living at home). Extremely low investment. However, it's a transfer pathway — would need 2+ more years at a 4-year university to complete a bachelor's in engineering. Total 4-year cost depends on transfer destination. Best value as a stepping stone.",
       roiSource: "JCCC tuition data, DOE College Scorecard salary data",
+      nationalRanking:
+        "Niche grade: B+, #75 Best Community Colleges. US News #128 Community Colleges, #1 in Kansas. Excellent transfer pathway — not directly comparable to 4-year universities.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: false,
     },
   },
@@ -208,7 +223,7 @@ const initialSchools = [
     tuitionRoomBoard: 55091,
     scholarships: [],
     medianIncome: 77646,
-    ratings: { affordability: 4, academic: 7, townVibe: 8, medianIncome: 8, roi: 6 },
+    ratings: { affordability: 4, academic: 7, townVibe: 8, medianIncome: 8, roi: 6, nationalRanking: 5 },
     notes: {
       affordability:
         "~$55,091/yr tuition + room & board (out-of-state). No scholarships yet. ASU offers competitive merit awards — worth applying. #1 Most Innovative University 11 years running.",
@@ -223,6 +238,9 @@ const initialSchools = [
       roi:
         "4-year cost without scholarships: ~$220,364. Strong MSE program with good starting salaries ($78k). Innovation ranking (#1, 11 years) signals strong employer relationships. Merit scholarship potential could significantly improve ROI.",
       roiSource: "Calculated from ASU tuition data and College Factual salary data",
+      nationalRanking:
+        "US News #117 National Universities. Niche grade: A, #110 nationally. #1 Most Innovative University for 11 consecutive years (ahead of MIT and Stanford). Massive research university with strong industry ties.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: true,
     },
   },
@@ -242,7 +260,7 @@ const initialSchools = [
     tuitionRoomBoard: 48700,
     scholarships: [],
     medianIncome: 79200,
-    ratings: { affordability: 4, academic: 9, townVibe: 8, medianIncome: 9, roi: 7 },
+    ratings: { affordability: 4, academic: 9, townVibe: 8, medianIncome: 9, roi: 7, nationalRanking: 9 },
     notes: {
       affordability:
         "~$48,700/yr tuition + room & board (out-of-state). No scholarships yet. UF is #7 public university — strong merit scholarship opportunities for high-achieving students.",
@@ -257,6 +275,9 @@ const initialSchools = [
       roi:
         "4-year cost without scholarships: ~$194,800. Best-ranked school in the group (#30 national, #7 public) with strong MSE salaries ($79k). Excellent value if merit scholarships are secured.",
       roiSource: "Calculated from UF tuition data and College Factual salary data",
+      nationalRanking:
+        "US News #30 National Universities, #7 Public University (8 consecutive years in top 10 publics). Niche grade: A+, #30 nationally, #5 Top Public. Highest-ranked school in Charlotte's list. Top 10 public MSE program.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: true,
     },
   },
@@ -276,7 +297,7 @@ const initialSchools = [
     tuitionRoomBoard: 45233,
     scholarships: [],
     medianIncome: 75977,
-    ratings: { affordability: 5, academic: 7, townVibe: 9, medianIncome: 8, roi: 7 },
+    ratings: { affordability: 5, academic: 7, townVibe: 9, medianIncome: 8, roi: 7, nationalRanking: 4 },
     notes: {
       affordability:
         "~$45,233/yr tuition + room & board (out-of-state). No scholarships yet. Offers unique BS in Metallurgical Engineering alongside MSE. Combined BS/MS program available.",
@@ -291,6 +312,9 @@ const initialSchools = [
       roi:
         "4-year cost without scholarships: ~$180,932. Strong MSE program with solid salaries ($76k). Unique Metallurgical Eng option. Combined BS/MS available. Lower sticker price than Clemson/USC with comparable outcomes.",
       roiSource: "Calculated from U of Utah tuition data and College Factual salary data",
+      nationalRanking:
+        "US News #151 National Universities. Niche grade: A, #124 nationally. Flagship state university with growing reputation. College Factual #53 MSE nationally, #1 in Utah. Strong 'Silicon Slopes' tech economy boosts career prospects.",
+      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
       materialsEng: true,
     },
   },
@@ -302,6 +326,7 @@ const CRITERIA = [
   { key: "townVibe", label: "Town Vibe", icon: "\u{1F3D9}\uFE0F", color: "#f59e0b" },
   { key: "medianIncome", label: "Income", icon: "\u{1F4B5}", color: "#0ea5e9" },
   { key: "roi", label: "Investment Return", icon: "\u{1F4C8}", color: "#8b5cf6" },
+  { key: "nationalRanking", label: "National Ranking", icon: "\u{1F3C6}", color: "#dc2626" },
 ];
 
 function StarRating({ value, color, isMobile }) {
