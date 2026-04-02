@@ -130,45 +130,6 @@ const initialSchools = [
     },
   },
   {
-    id: 5,
-    name: "Univ. of South Carolina",
-    shortName: "USC",
-    location: "Columbia, SC",
-    logo: "/logos/usc.png",
-    schoolColor: "#73000A",
-    isKansas: false,
-    hasMaterialsEng: true,
-    nicheGrade: "A",
-    nicheRank: "#97 National",
-    usNewsRank: "#127 National Universities",
-    materialsEngRank: "Not ranked separately",
-    tuitionRoomBoard: 64052,
-    scholarships: [
-      { name: "Scholarship", amount: 10697 },
-    ],
-    medianIncome: 71973,
-    ratings: { affordability: 3, academic: 7, townVibe: 7, medianIncome: 7, roi: 5, nationalRanking: 5 },
-    notes: {
-      affordability:
-        "~$64,052/yr tuition + room & board (out-of-state). $10,697/yr scholarship brings it down to ~$53,355/yr.",
-      academic:
-        "Materials Science & Engineering program available. Good engineering school with nuclear engineering specialty. Urban campus with more diverse academic offerings.",
-      townVibe:
-        "Columbia is a mid-size city — more urban feel than a typical college town. Five Points entertainment district, diverse food scene, warm weather year-round.",
-      townVibeSource: "Niche.com, USC student reviews, Experience Columbia SC",
-      medianIncome:
-        "USC engineering grads earn ~$71,973/yr early career (College Factual). Mechanical Engineering starts at ~$72,370. All-major alumni median is $52,100 six years post-graduation. Mid-career all-majors median: ~$92,000–$98,000.",
-      medianIncomeSource: "College Factual, USC Career Center, PayScale, DOE College Scorecard",
-      roi:
-        "4-year cost after scholarship: ~$213,420. Scholarship helps but still one of the higher total costs. Engineering salary outcomes are solid ($72k) but the high sticker price extends the payback period compared to KU or Purdue.",
-      roiSource: "Calculated from USC tuition data and College Factual engineering salary data",
-      nationalRanking:
-        "US News #127 National Universities. Niche grade: A, #97 nationally. Flagship state university with solid overall reputation. Good engineering school with nuclear engineering specialty.",
-      nationalRankingSource: "US News & World Report 2026, Niche.com 2026",
-      materialsEng: true,
-    },
-  },
-  {
     id: 6,
     name: "Johnson County Community College",
     shortName: "JCCC",
